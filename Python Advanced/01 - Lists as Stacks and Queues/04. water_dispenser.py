@@ -3,10 +3,8 @@
 from collections import deque
 
 water = int(input())
-
 name = input()
 people = deque()
-
 
 while name != "Start":
     people.append()    
@@ -20,7 +18,6 @@ while command != "End":
         liters_requested = int(data[0])
         person = people.popleft()
         
-        
         if water >= liters_requested:
             print(f"{person} got water")
             water -= liters_requested
@@ -28,8 +25,11 @@ while command != "End":
             print(f"{person} must wait")
             
     elif len(data) == 2:
-        _, liters_to_add = data            
-            
-            
-            
+        _, liters_to_add = data
+        water += int(liters_to_add)  
+        
+    command = input()
+       
+print(f"{water} liters left")                 
+                   
 # Second task from me
