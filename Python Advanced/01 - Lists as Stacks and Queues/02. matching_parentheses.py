@@ -1,6 +1,15 @@
 # First task from the lecture
 
+expression = input()
+paren_indexes = []
 
-
-
+for index in range(o, len(expression)):
+    if expression[index] == "(":
+        paren_indexes.append(index)
+    elif expression[index] == ")":
+        start_index = paren_indexes.pop()
+        end_index = index + 1    
+        print(expression[start_index:end_index])
+        
+        
 # Second task from me
