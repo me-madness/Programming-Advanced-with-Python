@@ -1,4 +1,5 @@
 # First task from the lecture
+
 from collections import deque
 
 name = input()
