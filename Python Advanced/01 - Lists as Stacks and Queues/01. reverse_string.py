@@ -4,11 +4,9 @@ new_string = str(input())
 reverse_string = reversed(new_string)
 print(" ".join(reverse_string))
 
-
 # Second task from the lecture
 
 text = input()
-
 print(text[::-1])
 
 # Third task from the lecture
