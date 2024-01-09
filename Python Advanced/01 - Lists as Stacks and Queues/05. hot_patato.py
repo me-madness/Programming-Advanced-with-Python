@@ -12,7 +12,4 @@ while len(names) > 1:
 
 print(f"Last is {removed_kid}")
 
-
-
-
 # Second task from me
