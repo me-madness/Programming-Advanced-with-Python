@@ -6,11 +6,12 @@ customers = deque()
 
 while name != "End":
     if name == "Paid":
-        pass
+        while customers:
+            print(customers.popleft())
     else:
         customers.append(name)
     name = input()
     
-    
+print(f"{len(deque)} people remaining.")    
     
 # Second task from me
