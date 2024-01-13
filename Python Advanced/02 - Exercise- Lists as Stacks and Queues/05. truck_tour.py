@@ -2,8 +2,14 @@
 
 from collections import deque
 
+# First way with comprehenchion    
 pumps_data = deque([[int(x) for x in input().split()] for _ in range(int(input()))])  # [[1, 5], [10, 3], [1, 3]]
 
+# Second way with for loop 
+pump_data = []
+for _ in range(int(input())):
+    pump_data.append([int(x) for x in input().split()])
+    
 pumps_data_copy = pumps_data.copy()
 gas_in_tank = 0
 index = 0
