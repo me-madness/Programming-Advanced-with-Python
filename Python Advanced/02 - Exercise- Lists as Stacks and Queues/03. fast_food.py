@@ -18,18 +18,18 @@ else:
     print("Orders complete")
 
 
-# solution 2
-#
-# while orders:
-#     order = orders.popleft()
-#
-#     if food >= order:
-#         food -= order
-#     else:
-#         print(f"Orders left:", order, *orders)  # " ".join([str(x) for x in orders])
-#         break
-# else:
-#     print("Orders complete")
+# Second way from the lecture
+
+while orders:
+    order = orders.popleft()
+
+    if food >= order:
+        food -= order
+    else:
+        print(f"Orders left:", order, *orders)  # " ".join([str(x) for x in orders])
+        break
+else:
+    print("Orders complete")
 
 
 

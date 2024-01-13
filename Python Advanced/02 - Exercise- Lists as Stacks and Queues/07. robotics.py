@@ -1,4 +1,5 @@
 # First task from the lecture
+from collections import deque
 
 robots = {}  # robot_name: [time_for_completion, time_till_free]
 
