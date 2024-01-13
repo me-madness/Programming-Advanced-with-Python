@@ -1,5 +1,6 @@
 # First task from the lecture
 from collections import deque
+from datetime import datetime, timedelta
 
 robots = {}  # robot_name: [time_for_completion, time_till_free]
 
