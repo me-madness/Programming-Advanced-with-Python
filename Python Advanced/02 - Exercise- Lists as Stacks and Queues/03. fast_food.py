@@ -7,6 +7,8 @@ orders = deque([int(x) for x in input().split()])
 
 print(max(orders))
 
+# First wa from the lecture
+
 for order in orders.copy():  # O(n)
     if food >= order:
         orders.popleft()
