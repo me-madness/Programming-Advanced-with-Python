@@ -3,6 +3,7 @@
 numbers = []
 
 for _ in range(int(input())):
+    # numbers_data = [int(x) for x in input().split()]  # "1 97" -> ["1", "97"] -> [1, 97]
     numbers_data = input().split()  # "1 97" -> ["1", "97"] -> [1, 97]
     command = numbers_data[0]
 
