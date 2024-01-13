@@ -17,7 +17,5 @@ while clothes:
 
 print(racks_count)
 
-
-
 # Second task from me
 
