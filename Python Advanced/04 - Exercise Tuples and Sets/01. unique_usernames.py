@@ -8,7 +8,6 @@ for _ in range(names_count):
     
 print(*names, sep="\n")    
 
-
 # Second way from the lecture
 
 print(*{input() for _ in range(int(input()))}, sep="\n")
