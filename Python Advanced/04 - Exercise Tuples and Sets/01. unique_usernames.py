@@ -8,5 +8,11 @@ for _ in range(names_count):
     
 print(*names, sep="\n")    
 
+
+# Second way from the lecture
+
+
+
+
 # Second task from me
 
