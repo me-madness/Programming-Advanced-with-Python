@@ -16,12 +16,7 @@ for _ in range(int(input())):
 print(f"Longest intersection is {', '.join(str(x) for x in longest_intersection)} with length {len(longest_intersection)}")        
         
 # Second way from the lecture
-
-
-
-
-
-        
+      
                
 # Second task from me
 
