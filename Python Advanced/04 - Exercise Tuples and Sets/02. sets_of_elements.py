@@ -7,5 +7,10 @@ second_set = {input() for _ in range(m)}  #3, 4, 5
 
 print(*first_set.intersection(second_set), sep="\n") # 3, 5
 
+print(first_set & second_set) # and, intersection
+print(first_set | second_set) # or, union
+print(first_set - second_set) # subtract, difference
+print(first_set ^ second_set) # symmetric, difference
+
 # Second task from me
 
