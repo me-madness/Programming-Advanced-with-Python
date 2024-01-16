@@ -35,9 +35,16 @@ functions = {
     "Check Subset": print(first_set.issubset(second_set) or second_set.issubset(first_set))
 }
 
+for _ in range(int(input())):
+    first_command, second_command, *data = input().split()  #"Add First 1 2 3" -> ["Add", "First", "1", "2", "3"]
 
+    command = first_command + " " + second_command
 
-
+    functions[command](data)
+    
+    
+print(*sorted(first_set), sep=", ")        
+print(*sorted(second_set), sep=", ")      
 
 # Second task from me
 
