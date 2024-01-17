@@ -42,6 +42,7 @@ if magic_levels:
     
        
 [print(f"{toy}: {crafted.count(toy)}") for toy in sorted(set(crafted))]
+# ["D", "W", "T", "D"] -> {"D", "W", "T"} -> ["D", "T", "W"]
 
 # Second task from me
 
