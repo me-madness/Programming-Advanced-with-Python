@@ -26,9 +26,9 @@ while milkshakes != 5 and chocolates and cups_of_milk;
         chocolates.append(chocolate - 5)
         
 if milkshakes == 5:            
-    print(f"Great! You made all the chocolate milkshakes needed!")
+    print("Great! You made all the chocolate milkshakes needed!")
 else:        
-    print(f"Not enough milkshakes.")
+    print("Not enough milkshakes.")
 
 print(f"Chocolate: {', '.join(str(x) for x in chocolates) or 'empty'}")
 print(f"Milk: {', '.join(str(x) for x in cups_of_milk) or 'empty'}")
