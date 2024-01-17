@@ -20,7 +20,10 @@ while materials and magic_levels:
     if not magic_level:
         continue
 
-
+    product = material * magic_level
+    
+    if presents.get(product):
+        crafted.append()(presents[product])
     
 print("The presents are crafted! Merry Christmas")
 print("No presents this Christmas")
