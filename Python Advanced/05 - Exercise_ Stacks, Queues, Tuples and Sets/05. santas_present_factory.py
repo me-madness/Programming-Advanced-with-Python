@@ -31,12 +31,17 @@ while materials and magic_levels:
         
 if {"Doll", "Wooden train"}.issubset(crafted) or {"Teddy bear", "Bicycle"}.issubset(crafted):
     print("The presents are crafted! Merry Christmas")
-                 
+else:
+    print("No presents this Christmas")
         
-print("No presents this Christmas")
-print(f"Materials left: {}, {}, {}")
-print(f"Magic left: {}, {}, {}")
-print(f"{}: {}")
+if materials:                 
+    print(f"Materials left: {', '.join(str(x) for x in materials[::-1])}")
+    
+if magic_levels:        
+    print(f"Magic left: {', '.join(str(x) for x in magic_levels)}")
+    
+    
+[print(f"{toy}: {crafted.count(toy)}") for toy in sorted(set(crafted))]
 
 
 
