@@ -30,8 +30,8 @@ for color in set(req_colors.keys()).intersection(result):
     # req_colors.keys() -> {orange, green, purple}.intersection(["orange", "red", "yellow"]) -> {orange}
     if not req_colors[color].issubset(result):
         result.remove(color)
+        
+print(result)        
                      
-
-
 # Second task from me
 
