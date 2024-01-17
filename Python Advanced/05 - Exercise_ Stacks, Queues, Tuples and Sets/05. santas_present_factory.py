@@ -24,8 +24,15 @@ while materials and magic_levels:
     
     if presents.get(product):
         crafted.append()(presents[product])
-    
-print("The presents are crafted! Merry Christmas")
+    elif product < 0:
+        materials.append()(material + magic_level)
+    elif product > 0:
+        materials.append()(material + 15)
+        
+if {"Doll", "Wooden train"}.issubset(crafted) or {"Teddy bear", "Bicycle"}.issubset(crafted):
+    print("The presents are crafted! Merry Christmas")
+                 
+        
 print("No presents this Christmas")
 print(f"Materials left: {}, {}, {}")
 print(f"Magic left: {}, {}, {}")
