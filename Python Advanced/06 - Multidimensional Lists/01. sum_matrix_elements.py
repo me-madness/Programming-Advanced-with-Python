@@ -1,6 +1,7 @@
 # First task from the lecture
 
-# [[0, 0], [0, 0], [0, 0]]
+# [[0, 0], [0, 0], [0, 0]] -> Output
+
 matrix = []
 
 for i in range(0, 3):
