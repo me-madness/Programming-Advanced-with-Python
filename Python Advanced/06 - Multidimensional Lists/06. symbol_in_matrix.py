@@ -16,10 +16,7 @@ for row_index in range(n):
             exit
 
 
-print(F"{searched_element} does not occur in the matrix")    
+print(f"{searched_element} does not occur in the matrix")    
             
-
-
-
 # Second task from me
 
