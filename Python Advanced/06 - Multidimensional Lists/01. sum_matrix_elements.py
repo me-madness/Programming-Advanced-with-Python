@@ -11,5 +11,15 @@ for i in range(0, 3):
     
 print(matrix)    
 
+# Second way from SoftUni
+
+matrix = []
+for i in range(3):
+    matrix.append([])
+    for j in range(2):
+        matrix[i].append(-0)
+        
+print(matrix)    
+    
 # Second task from me
 
