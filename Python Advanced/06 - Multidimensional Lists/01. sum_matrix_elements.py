@@ -11,6 +11,6 @@ for i in range(row):
     
 print(total_amount)    
 print(matrix)    
-    
+        
 # Second task from me
 

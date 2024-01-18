@@ -11,6 +11,10 @@ for i in range(0, 3):
     
 print(matrix)    
 
+# One line List Comprehensions 
+
+matrix = [[0 for j in range(2)] for i in range(3)]
+
 # Second way from SoftUni
 # [[0, 0], [0, 0], [0, 0]] -> Output
 
@@ -34,3 +38,7 @@ for i in range(3):
     matrix.append(sub_list)
     
 print(matrix)  
+
+# One line List Comprehensions 
+
+matrix = [[j for j in range(1, 4) for i in range(3)]]
