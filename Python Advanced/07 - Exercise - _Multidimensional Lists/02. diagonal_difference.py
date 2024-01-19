@@ -22,7 +22,5 @@ for i in range(n):
 
 print(abs(primary_sum - second_sum))
 
-
-
 # Second task from me
 
