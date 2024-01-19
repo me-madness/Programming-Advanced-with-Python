@@ -15,7 +15,5 @@ for row in range(rows - 1):
             
 print(equal_blocks)            
 
-
-
 # Second task from me
 
