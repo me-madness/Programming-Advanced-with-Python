@@ -10,7 +10,5 @@ for row in range(start, start + rows):
         
     print()   
 
-
-
 # Second task from me
 
