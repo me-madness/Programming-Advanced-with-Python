@@ -1,6 +1,6 @@
 # First task from the lecture
 
-
+n = int(input())
 
 
 
