@@ -15,7 +15,7 @@ while code != "END":
     code = input()
 
 print(len(codes)) 
-for code in codes:
+for code in sorted(codes):
     print(code)
             
 # Second task from me
