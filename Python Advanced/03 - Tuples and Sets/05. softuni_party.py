@@ -2,10 +2,11 @@
 
 n = int(input())
 
-party = set()
+codes = set()
 
 for _ in range(n):
-    
+    code = input()
+    codes.add(code)
 
 
 
