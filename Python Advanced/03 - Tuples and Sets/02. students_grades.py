@@ -14,7 +14,7 @@ for _ in range(n):
     
 for name, grades in student_grades.items():
     avg_grade = sum(grades) / len(grades)
-    formatted_grades = f"{' '.join(grades)}"
+    formatted_grades = f"{' '.join([str(g) for g in grades])}"
     print(f"{name} -> {formatted_grades} (avg: {avg_grade:.2f})")
 
 # Second task from me
