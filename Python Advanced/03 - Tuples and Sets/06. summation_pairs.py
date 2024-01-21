@@ -25,7 +25,25 @@ for i in range(len(numbers)):
  
 # Second way from SoftUni
 
+targets = set()
+values_map = {}
 
+for value in numbers:
+    resulting_numbers = target - value
+    targets.add(resulting_numbers)
+    values_map[resulting_numbers] = value    
+
+
+for value in numbers:
+    if value in targets:
+        targets.remove(value)
+        pair = values_map[value]
+        del values_map[value]
+        print(f"{pair} + {value} = {target}")
+    else:
+        resulting_numbers = target - value
+        targets.add(resulting_numbers)
+        values_map[resulting_numbers] = value    
 
 
 
