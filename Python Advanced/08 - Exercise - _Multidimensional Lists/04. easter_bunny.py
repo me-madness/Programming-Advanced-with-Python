@@ -6,7 +6,7 @@ matrix = []
 bunny_pos = []
 best_path = []
 
-
+best_direction = None
 
 
 # Second task from me
