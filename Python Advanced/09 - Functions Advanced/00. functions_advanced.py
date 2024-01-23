@@ -28,4 +28,14 @@ greet_me(a = 5, b = 6, c =7, d = 8,)
 
 # Practice
 
+def print_nums(a, b, c):
+    print(a, b, c)
+
+
+nums = [1, 2, 3]
+a, b, c = nums
+print_nums(*nums)
+
+# Practice
+
    
