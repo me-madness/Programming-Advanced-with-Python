@@ -75,6 +75,8 @@ def factorial(number):
         
 print(factorial(5))
 
-# Practice 
+# Practice Closures Example 
 
+def greeting(name):
+    pass
 
