@@ -44,4 +44,8 @@ def some_func(name, age):
     
 person = {'age': 20, 'name': "Peter"}
 some_func(person['name'], person['age'])
-some_func(**person)       
+some_func(**person)   
+
+# Practice 
+
+    
