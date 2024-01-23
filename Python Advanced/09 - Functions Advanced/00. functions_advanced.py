@@ -80,3 +80,8 @@ print(factorial(5))
 def greeting(name):
     pass
 
+# Practice Recursion - Function Calling Itself
+
+
+
+
