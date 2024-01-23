@@ -46,10 +46,19 @@ person = {'age': 20, 'name': "Peter"}
 some_func(person['name'], person['age'])
 some_func(**person)   
 
-# Practice Sorted
+# Practice Sorted Dictionary by Value
 
 a = [10, 5, -3, 28]
 people = {"Peter": 21, "George": 18, "John": 45}
 
 print(sorted(a, reverse=True))    
 print(sorted(people.items(), key=lambda kvp: kvp[0]))
+
+# Practice Sorted Dictionary by Value
+
+people = {"Peter": 21, "George": 18, "John": 45}
+
+print(sorted(people.items(), key=lambda kvp: - kvp[0]))
+
+# Practice 
+
