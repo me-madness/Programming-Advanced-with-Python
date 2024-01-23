@@ -26,7 +26,7 @@ def greet_me(**kwargs):
         
 greet_me(a = 5, b = 6, c =7, d = 8,)     
 
-# Practice Unpacking Dictionary
+# Practice Unpacking Dictionaries
 
 def print_nums(a, b, c):
     print(a, b, c)
@@ -36,7 +36,7 @@ nums = [1, 2, 3]
 a, b, c = nums
 print_nums(*nums)
 
-# Practice
+# Practice Unpacking Dictionaries
 
 def some_func(name, age):
     print(f"{name} is {age} years old.")

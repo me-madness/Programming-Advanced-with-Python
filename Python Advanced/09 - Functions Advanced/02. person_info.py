@@ -1,12 +1,10 @@
 # First task is from the lecture
 
-def print_nums(a, b, c):
-    print(a, b, c)
-
-
-nums = [1, 2, 3]
-a, b, c = nums
-print_nums(*nums)
+def get_info(name, town, age):
+    print(f"This is {name} from  {town} and he is {age} ")
+    
+    
+print(get_info(**{"name": "George", "town": "Sofiq", "age": 20}))    
 
 # Second task is from me
 
