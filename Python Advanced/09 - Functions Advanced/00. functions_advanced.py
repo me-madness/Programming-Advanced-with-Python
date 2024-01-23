@@ -46,6 +46,10 @@ person = {'age': 20, 'name': "Peter"}
 some_func(person['name'], person['age'])
 some_func(**person)   
 
-# Practice 
+# Practice Sorted
 
-    
+a = [10, 5, -3, 28]
+people = {"Peter": 21, "George": 18, "John": 45}
+
+print(sorted(a, reverse=True))    
+print(sorted(people.items(), key=lambda kvp: kvp[0]))
