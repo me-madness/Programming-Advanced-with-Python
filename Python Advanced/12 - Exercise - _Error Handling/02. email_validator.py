@@ -34,7 +34,8 @@ while email != "End":
         raise NameTooShortError("Name must be more than 4 characters!")
     elif email.split(".")[-1] not in VALID_DOMAINS:    
         raise InvalidDomainError(f"Domain must be one of the following: {', '.join('.' + d for d in VALID_DOMAINS)}")
-    elif findall()
+    elif findall(pattern_name, email.split("@")[0])[0] != email.split("@")[0]:
+        raise InvalidNameError("")
     
     
     email = input()
