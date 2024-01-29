@@ -15,6 +15,10 @@ class MoreThanOneAtSymbol(Exception):
 class InvalidNameError(Exception):
     pass
     
+ 
+VALID_DOMAINS = (".com", ".bg", ".org", ".net", ) 
+MIN_NAME_SYMBOLS_COUNT = 4
+
     
 # Second task from me
 
