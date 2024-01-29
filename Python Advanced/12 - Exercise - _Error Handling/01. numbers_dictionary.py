@@ -32,10 +32,15 @@ line = input()
 
 while line != "End":
     searched = line
-    del numbers_dictionary[searched]
     
+    try:
+        del numbers_dictionary[searched]
+    except KeyError:
+        print("Number does not exist in dictionary")
+        
+    line = input()
+        
 print(numbers_dictionary)        
-
 
 # Second task from me
 
