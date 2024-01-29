@@ -19,6 +19,8 @@ class InvalidNameError(Exception):
 VALID_DOMAINS = (".com", ".bg", ".org", ".net", ) 
 MIN_NAME_SYMBOLS_COUNT = 4
 
+pattern_name = r'\w+'
+
 email = input()
 
 while email != "End":
@@ -30,7 +32,7 @@ while email != "End":
     elif len(email.split("@")[0]) <= MIN_NAME_SYMBOLS_COUNT:
         raise NameTooShortError("Name must be more than 4 characters!")
     elif email.split(".")[-1] not in VALID_DOMAINS:    
-        raise InvalidDomainError(f"Domain must be one of the following: .com, .bg, .org, .net")
+        raise InvalidDomainError(f"Domain must be one of the following: {', '.join('.' + d for d in VALID_DOMAINS)}")
     
     
     
