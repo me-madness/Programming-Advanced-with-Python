@@ -16,7 +16,6 @@ class MoreThanOneAtSymbol(Exception):
 class InvalidNameError(Exception):
     pass
     
- 
 VALID_DOMAINS = (".com", ".bg", ".org", ".net", ) 
 MIN_NAME_SYMBOLS_COUNT = 4
 
@@ -35,12 +34,12 @@ while email != "End":
     elif email.split(".")[-1] not in VALID_DOMAINS:    
         raise InvalidDomainError(f"Domain must be one of the following: {', '.join('.' + d for d in VALID_DOMAINS)}")
     elif findall(pattern_name, email.split("@")[0])[0] != email.split("@")[0]:
-        raise InvalidNameError("")
+        raise InvalidNameError("Name must contain only letters, digits and underscores!")
     
+    print("Email is valid")
     
     email = input()
 
-    
 # Second task from me
 
 
