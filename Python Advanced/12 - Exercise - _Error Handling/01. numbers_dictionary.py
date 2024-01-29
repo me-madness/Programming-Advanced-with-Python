@@ -15,7 +15,6 @@ while line != "Search":
         
     line = input()    
          
-
 line = input()    
 
 while line != "Remove":
