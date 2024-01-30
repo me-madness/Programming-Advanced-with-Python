@@ -1,4 +1,4 @@
-# First task from the lecture
+# First task - Create file 
 
 import os
 
@@ -14,7 +14,7 @@ try:
 except FileNotFoundError:
     print("File is not found")
     
-# SEcond practice - reading file
+# Second task - Reading file
 
 file = open("my_example.txt")
 
@@ -28,7 +28,12 @@ for line in lines:
 [print(line, end="") for line in lines]
         
 
-# Second task from me
+# Third task - writing and 
 
+file = open("my_example.txt")
 
+print(file.closed)
 
+file.close()
+
+print(file.closed)
