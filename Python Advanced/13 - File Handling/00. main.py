@@ -3,7 +3,7 @@
 import os
 
 file_name = "text.txt"
-
+path = os.path.join("resources", file_name)
 try:
     file = open(file_name)
     print("File found")
