@@ -27,7 +27,7 @@ for line in lines:
 
 [print(line, end="") for line in lines]
         
-# Third task - writing 
+# Third task  part one- Writing 
 
 file = open("my_example.txt")
 
@@ -37,7 +37,7 @@ file.close()
 
 print(file.closed)
 
-# Forth task - writing
+# Third task  part two - Writing
 
 import os
 
@@ -47,4 +47,6 @@ with open(path) as file:
     lines = file.readlines()
     print(file.closed)
     
-print(file.closed)    
+print(file.closed) 
+
+# Forth task - Delete file   
