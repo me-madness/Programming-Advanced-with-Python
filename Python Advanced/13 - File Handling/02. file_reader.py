@@ -1,15 +1,16 @@
 # First task from the lecture
 
-file = open("my_example.txt")
+import os
 
-print(file.read(2))
-print(file.read(2))
-print(file.read(5))
-lines = file.readline()
-for line in lines:
-    print(line)
+path = os.path.join("resources", "numbers.txt")
 
-[print(line, end="") for line in lines]
+file = open(path)
+
+total_amount = 0
+for line in file.readlines():
+    total_amount += line
+    
+print(line)    
 
 # Second task from me
 
