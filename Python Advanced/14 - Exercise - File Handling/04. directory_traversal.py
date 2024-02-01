@@ -20,3 +20,8 @@ directory = input()
 extensions = {} 
 save_extensions(directory)
 print(extensions)   
+
+
+# Second task from me
+
+
