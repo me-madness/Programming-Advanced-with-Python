@@ -10,10 +10,13 @@ def save_extensions(dir_name):
     
         if os.path.isfile(file):
             extension = filename.split(".")[-1]   
-            
             extensions[extension] = extensions.get(extension, []) + [filename]
+        elif os.path.isdir(file):
+            save_extensions(file)    
             
             
                 
 directory = input()
-extensions = {}    
+extensions = {} 
+save_extensions(directory)
+print(extensions)   
