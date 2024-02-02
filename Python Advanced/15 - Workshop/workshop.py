@@ -1,7 +1,7 @@
 class FullColumnError(Exception):
     pass
 
-class InvalidChoice(Exception):
+class InvalidColumnChoice(Exception):
     pass
 
 
@@ -35,10 +35,11 @@ turns = 1
 
 while True:
     player = 2 if turns % 2 == 0 else 1
-    column = input(f"Player {player}, place chose a column")
-    column_index = int(column) - 1
     
     try:
+        column = input(f"Player {player}, place chose a column")
+        validate_column_choice(column)
+        column_index = int(column) - 1
         place_player_choice(column_index, player, board_map)
     except FullColumnError:
         print("This column is full, please select another one")    
