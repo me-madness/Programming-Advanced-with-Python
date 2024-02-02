@@ -18,6 +18,7 @@ def validate_column_choice(col):
        return True
    raise InvalidColumnChoice
 
+
 def place_player_choice(col_index, player_num, board_map):
     for row_index in range(ROWS - 1, -1, -1):
         if board_map[row_index][col_index] == 0:
