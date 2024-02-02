@@ -24,7 +24,7 @@ def get_first_available_row(col_index, board_map):
         if board_map[row_index][col_index] == 0:
             return row_index
         else:
-            raise FullColumnError("This column is full, please select another one")
+            raise FullColumnError
      
         
 board_map = []
