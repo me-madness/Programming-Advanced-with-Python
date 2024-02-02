@@ -19,11 +19,10 @@ def validate_column_choice(col):
    raise InvalidColumnChoice
 
 
-def place_player_choice(col_index, player_num, board_map):
+def get_first_available_row(col_index, board_map):
     for row_index in range(ROWS - 1, -1, -1):
         if board_map[row_index][col_index] == 0:
-            board_map[row_index][col_index] = player_num
-            break
+            return row_index
         else:
             raise FullColumnError("This column is full, please select another one")
      
@@ -43,8 +42,9 @@ while True:
         column = input(f"Player {player}, place chose a column")
         validate_column_choice(column)
         column_index = int(column) - 1
-        place_player_choice(column_index, player, board_map)
-    except FullColumnError:
+        row = get_first_available_row(column_index, board_map)
+        board_map[row][column_index] = player
+    except FullColumnError as ex:
         print("This column is full, please select another one")    
         continue
     except (InvalidColumnChoice, ValueError):
