@@ -9,6 +9,25 @@ ROWS = 6
 COLS = 7
 
 
+DIRECTION_MAPPER = {
+    "left": (0, -1),
+    "up": (-1, 0),
+    "main_diagonal": (-1, -1),
+    "other_diagonal": (-1, 1),
+}
+
+
+def travel_direction(coordinates, board_map):
+    a = 5
+
+
+
+def is_winner(current_row_index, current_col_index, board_map):
+    for direction, coords in DIRECTION_MAPPER.items():
+        searched_element = board_map[current_row_index][current_col_index]
+        travel_direction(coords,searched_element, board_map) 
+    
+    
 def print_board(board_map):
     for row in board_map:
         print(row)
@@ -44,6 +63,8 @@ while True:
         column_index = int(column) - 1
         row = get_first_available_row(column_index, board_map)
         board_map[row][column_index] = player
+        if is_winner(row, column_index, board_map):
+            break
     except FullColumnError as ex:
         print("This column is full, please select another one")    
         continue
@@ -54,7 +75,7 @@ while True:
       
     print_board(board_map)        
     turns += 1    
-      
+print(f"WINNER is player {player}")      
 print_board(board_map)   
 
 
