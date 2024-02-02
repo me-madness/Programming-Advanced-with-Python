@@ -14,7 +14,9 @@ def print_board(board_map):
 
 
 def validate_column_choice(col):
-    return 1 <= col <= COLS
+   if 1 <= col <= COLS:
+       return True
+   raise InvalidColumnChoice
 
 def place_player_choice(col_index, player_num, board_map):
     for row_index in range(ROWS - 1, -1, -1):
@@ -44,7 +46,7 @@ while True:
     except FullColumnError:
         print("This column is full, please select another one")    
         continue
-    except InvalidColumnChoice:
+    except (InvalidColumnChoice, ValueError):
         print(f"This column is invalid, please select a number between 1 and {COLS}")  
         continue
     
