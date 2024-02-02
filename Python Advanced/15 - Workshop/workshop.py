@@ -17,7 +17,7 @@ DIRECTION_MAPPER = {
 }
 
 
-def travel_direction(coordinates, current_row, current_col, element, board_map):
+def travel_direction(coordinates, current_row, current_col, element, board):
     count = 0
     for _ in range(1, 4):
         row_direction, col_direction = coordinates
@@ -25,7 +25,7 @@ def travel_direction(coordinates, current_row, current_col, element, board_map):
         next_element_col_index = current_col + col_direction    
 
         try:
-            if board_map[next_element_row_index][next_element_col_index] == element:
+            if board[next_element_row_index][next_element_col_index] == element:
                 count += 1
             else:
                 return count
@@ -33,14 +33,14 @@ def travel_direction(coordinates, current_row, current_col, element, board_map):
             return count
                 
 
-def is_winner(current_row_index, current_col_index, board_map):
+def is_winner(current_row_index, current_col_index, board):
     for direction, coords in DIRECTION_MAPPER.items():
-        searched_element = board_map[current_row_index][current_col_index]
-        travel_direction(coords,searched_element, board_map) 
+        searched_element = board[current_row_index][current_col_index]
+        travel_direction(coords,searched_element, board) 
     
     
-def print_board(board_map):
-    for row in board_map:
+def print_board(board):
+    for row in board:
         print(row)
 
 
@@ -50,18 +50,18 @@ def validate_column_choice(col):
    raise InvalidColumnChoice
 
 
-def get_first_available_row(col_index, board_map):
+def get_first_available_row(col_index, board):
     for row_index in range(ROWS - 1, -1, -1):
-        if board_map[row_index][col_index] == 0:
+        if board[row_index][col_index] == 0:
             return row_index
         else:
             raise FullColumnError
      
         
-board_map = []
+board = []
 
 for _ in range(ROWS):
-    board_map.append([0 for _ in range(COLS)])
+    board.append([0 for _ in range(COLS)])
     
 turns = 1
 
@@ -72,9 +72,9 @@ while True:
         column = input(f"Player {player}, place chose a column")
         validate_column_choice(column)
         column_index = int(column) - 1
-        row = get_first_available_row(column_index, board_map)
-        board_map[row][column_index] = player
-        if is_winner(row, column_index, board_map):
+        row = get_first_available_row(column_index, board)
+        board[row][column_index] = player
+        if is_winner(row, column_index, board):
             break
     except FullColumnError as ex:
         print("This column is full, please select another one")    
@@ -84,11 +84,11 @@ while True:
         continue
     
       
-    print_board(board_map)        
+    print_board(board)        
     turns += 1    
     
 print(f"WINNER is player {player}")      
-print_board(board_map)   
+print_board(board)   
 
 
 
@@ -98,7 +98,7 @@ print_board(board_map)
 
 
 
-# board_map = {
+# board = {
 #     [0, 0, 0, 0, 0 ,0, 0, 0]
 #     [0, 0, 0, 0, 0 ,0, 0, 0]
 #     [0, 0, 0, 0, 0 ,0, 0, 0]
