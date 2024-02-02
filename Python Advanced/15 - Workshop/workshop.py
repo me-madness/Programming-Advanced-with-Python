@@ -8,6 +8,7 @@ class InvalidColumnChoice(Exception):
 ROWS = 6
 COLS = 7
 
+
 def print_board(board_map):
     for row in board_map:
         print(row)
@@ -28,7 +29,6 @@ def get_first_available_row(col_index, board_map):
      
         
 board_map = []
-
 
 for _ in range(ROWS):
     board_map.append([0 for _ in range(COLS)])
@@ -55,7 +55,7 @@ while True:
     print_board(board_map)        
     turns += 1    
       
-print_board(board_map)    
+print_board(board_map)   
 
 
 
