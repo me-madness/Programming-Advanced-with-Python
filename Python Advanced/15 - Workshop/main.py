@@ -9,12 +9,14 @@ def print_board(board_map):
     for row in board_map:
         print(row)
 
-def place_player_choice(cal_index, player_num, board_map):
+def place_player_choice(col_index, player_num, board_map):
     for row_index in range(ROWS - 1, -1, -1):
-        if board_map[row_index][col_index] = player_num
+        if board_map[row_index][col_index] == 0:
+            board_map[row_index][col_index] = player_num
             break
         else:
             raise FullColumnError("This column is full, please select another one")
+     
         
 board_map = []
 
