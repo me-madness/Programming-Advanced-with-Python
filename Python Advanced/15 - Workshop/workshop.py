@@ -17,10 +17,21 @@ DIRECTION_MAPPER = {
 }
 
 
-def travel_direction(coordinates, board_map):
-    a = 5
+def travel_direction(coordinates, current_row, current_col, element, board_map):
+    count = 0
+    for _ in range(1, 4):
+        row_direction, col_direction = coordinates
+        next_element_row_index = current_row + row_direction    
+        next_element_col_index = current_col + col_direction    
 
-
+        try:
+            if board_map[next_element_row_index][next_element_col_index] == element:
+                count += 1
+            else:
+                return count
+        except IndexError:
+            return count
+                
 
 def is_winner(current_row_index, current_col_index, board_map):
     for direction, coords in DIRECTION_MAPPER.items():
@@ -75,6 +86,7 @@ while True:
       
     print_board(board_map)        
     turns += 1    
+    
 print(f"WINNER is player {player}")      
 print_board(board_map)   
 
