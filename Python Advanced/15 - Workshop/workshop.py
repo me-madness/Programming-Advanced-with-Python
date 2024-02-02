@@ -31,6 +31,11 @@ while True:
     column = input(f"Player {player}, place chose a column")
     column_index = int(column) - 1
     
+    try:
+        place_player_choice(column_index, player, board_map)
+    except FullColumnError:
+        print("This column is full, please select another one")    
+        
     turns += 1    
       
 print_board(board_map)    
