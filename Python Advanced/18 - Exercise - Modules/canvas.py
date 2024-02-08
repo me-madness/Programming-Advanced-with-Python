@@ -1,11 +1,12 @@
 from tkinter import Tk, Canvas
 
+
 def create_root():
     root = Tk()
     
     root.title("GUI Shop")
     root.geometry("700x600")
-    root.resizable(width:False, height:False)
+    root.resizable(width=False, height=False)
     
     return root
 
