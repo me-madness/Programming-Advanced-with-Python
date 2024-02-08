@@ -25,9 +25,7 @@ def render_entry():
         bd=0,
         width=90,
         height=40,
-        command=login
-        
-        
+        command=login 
         
     )
     
@@ -49,6 +47,24 @@ def register():
     frame.create_window(230, 100, window=last_name_box)
     frame.create_window(230, 150, window=username_box)
     frame.create_window(230, 200, window=password_box)
+    
+    register_button = Button(
+        root,
+        text="Register",
+        bg="green",
+        fg="white", 
+        bd=0,
+        width=80,
+        height=40,
+        command=registration   
+        
+    )
+    
+    frame.create_window(315, 250, window=register_button)
+    
+    
+def registration():
+    print("Register")    
     
     
 def login():
