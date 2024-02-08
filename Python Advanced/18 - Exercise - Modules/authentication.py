@@ -1,4 +1,5 @@
-from tkinter import Button
+# from tkinter import Entry
+from tkinter import Button, Entry
 from canvas import root, frame
 from helpers import clean_screen
 
@@ -36,9 +37,27 @@ def render_entry():
     
 def register():
     clean_screen()
-    print("Register")    
+    
+        
+    frame.create_text(100, 50, text="First Name:")
+    frame.create_text(100, 100, text="Last Name:")
+    frame.create_text(100, 150, text="Username:")
+    frame.create_text(100, 200, text="Password:")
+    
+    
+    frame.create_window(230, 50, window=first_name_box)
+    frame.create_window(230, 100, window=last_name_box)
+    frame.create_window(230, 150, window=username_box)
+    frame.create_window(230, 200, window=password_box)
     
     
 def login():
     clean_screen()
-    print("Login")    
+    print("Login")  
+    
+    
+first_name_box = Entry(root, bd=0)    
+last_name_box = Entry(root, bd=0)    
+username_box = Entry(root, bd=0)    
+password_box = Entry(root, bd=0)    
+      
