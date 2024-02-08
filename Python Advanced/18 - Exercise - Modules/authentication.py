@@ -6,9 +6,9 @@ def render_entry():
     register_button = Button(
         root,
         text="Register",
-        bg="green",
-        fg="white", 
-        bd=0,
+        bg="green",        #background color
+        fg="white",        #color
+        bd=0,              #border
         width=90,
         height=40,
         command=register
@@ -31,6 +31,7 @@ def render_entry():
     )
     
     frame.create_window(350, 260, window=register_button)
+    frame.create_window(350, 310, window=login_button)
     
     
 def register():
