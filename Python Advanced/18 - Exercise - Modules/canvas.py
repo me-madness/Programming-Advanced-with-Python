@@ -4,5 +4,12 @@ def create_root():
     root = Tk()
     
     root.title("GUI Shop")
-    root.
-    root.
+    root.geometry("700x600")
+    root.resizable(width:False, height:False)
+    
+    return root
+
+
+def crete_frame():
+    frame = Canvas(root, width=700, height=700)
+    frame.grid(row=0, column=0)
