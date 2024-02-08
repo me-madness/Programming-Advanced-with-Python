@@ -1,6 +1,6 @@
 from tkinter import Button
 from canvas import root, frame
-
+from helpers import clean_screen
 
 def render_entry():
     register_button = Button(
@@ -35,8 +35,10 @@ def render_entry():
     
     
 def register():
+    clean_screen()
     print("Register")    
     
     
 def login():
+    clean_screen()
     print("Login")    
