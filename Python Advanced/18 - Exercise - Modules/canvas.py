@@ -13,3 +13,8 @@ def create_root():
 def crete_frame():
     frame = Canvas(root, width=700, height=700)
     frame.grid(row=0, column=0)
+    
+    return frame
+
+root = create_root
+frame = crete_frame
