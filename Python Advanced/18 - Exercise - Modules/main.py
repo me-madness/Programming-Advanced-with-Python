@@ -1,3 +1,4 @@
+from authentication import render_entry
 from canvas import root
 
 
