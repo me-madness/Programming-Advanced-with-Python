@@ -5,9 +5,6 @@ def is_in_boundaries(row_index, col_index, n):
 
 
 
-
-
-
 direction_maper = {
     "up": (-1, 0),
     "down": (1, 0),
@@ -37,7 +34,9 @@ while direction != "end":
     desired_row_index = current_row_index + row_movement
     desired_col_index = current_col_index + col_movement
     
-    
+    if not is_in_boundaries(desired_row_index, desired_col_index, n):
+        print("Game over! You lost everything!")
+        exit()
     
     direction = input()
 
