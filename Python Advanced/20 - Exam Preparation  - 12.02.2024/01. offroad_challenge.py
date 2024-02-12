@@ -6,6 +6,8 @@ initial_fuel = [int(el) for el in input().split()]
 additional_consumption_index = deque([int(el) for el in input().split()])
 amount_of_fuel_needed = deque([int(el) for el in input().split()])
 
+altitude_count = 0
+
 while initial_fuel and additional_consumption_index and amount_of_fuel_needed:
     fuel = initial_fuel[-1]
     index = additional_consumption_index[0]
@@ -15,10 +17,20 @@ while initial_fuel and additional_consumption_index and amount_of_fuel_needed:
         initial_fuel.pop()
         additional_consumption_index.popleft()
         amount_of_fuel_needed.popleft()
+        altitude_count += 1
+        print(f"John has reached: Altitude {altitude_count}")
     else:
-        
+        print(f"John did not reach: Altitude {altitude_count}")
         break    
         
+
+if initial_fuel and altitude_count:
+    print(f"John failed to reach the top.")
+    print(f"Reached altidudes: {', '.join([f"Altitude {num}" for num in range(1, altitude_count +1)])}")
+elif initial_fuel and not altitude_count:
+    print(f"John failed to reach the top.")
+    print("")
+
 
 
 
