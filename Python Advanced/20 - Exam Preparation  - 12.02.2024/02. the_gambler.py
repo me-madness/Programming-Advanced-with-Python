@@ -1,7 +1,7 @@
 # First task is from the lecture
 
 def is_in_boundaries(row_index, col_index, n):
-    if 0 <= row_index < n and 0 <
+    return 0 <= row_index < n and 0 <=col_index < n:
 
 
 
@@ -26,8 +26,20 @@ for row_index in range(n):
     if "G" in data:
         col_index = data.index("G")
         player_position = [row_index, col_index]
+    board.append(data)
 
 
+direction = input()
+
+while direction != "end":
+    current_row_index, current_col_index = player_position
+    row_movement, col_movement = direction_maper[direction]
+    desired_row_index = current_row_index + row_movement
+    desired_col_index = current_col_index + col_movement
+    
+    
+    
+    direction = input()
 
 
 
