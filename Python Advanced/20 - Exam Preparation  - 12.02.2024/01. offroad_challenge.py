@@ -29,9 +29,10 @@ if initial_fuel and altitude_count:
     print(f"Reached altidudes: {', '.join([f"Altitude {num}" for num in range(1, altitude_count +1)])}")
 elif initial_fuel and not altitude_count:
     print(f"John failed to reach the top.")
-    print("")
+    print("John didn't reach any altitudes.")
 
-
+if not initial_fuel:
+    print("John has reached all the altitudes and managed to reach the top!")
 
 
 # Second task is from me
