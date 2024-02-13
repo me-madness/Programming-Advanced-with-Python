@@ -28,6 +28,7 @@ for row_index in range(n):
 
 direction = input()
 
+
 while direction != "end":
     current_row_index, current_col_index = player_position
     row_movement, col_movement = direction_maper[direction]
