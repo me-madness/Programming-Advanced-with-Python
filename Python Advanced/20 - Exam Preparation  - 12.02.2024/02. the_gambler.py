@@ -4,7 +4,11 @@ def is_in_boundaries(row_index, col_index, n):
     return 0 <= row_index < n and 0 <=col_index < n:
 
 
-
+def print_board(board):
+    for row  in board:
+        print(''.join(row))
+        
+        
 direction_maper = {
     "up": (-1, 0),
     "down": (1, 0),
@@ -39,11 +43,10 @@ while direction != "end":
         print("Game over! You lost everything!")
         exit()
     
-    
     symbol = board[desired_row_index][desired_col_index]
     board[desired_row_index][desired_col_index] = "G"
     board[desired_row_index][desired_col_index] = "-"
-    player_position = [current_row_index, current_col_index]
+    player_position = [desired_row_index, desired_col_index]
     
     if symbol == "W":
         money += 100
@@ -51,20 +54,19 @@ while direction != "end":
         money -= 200
         if symbol <= 0:
             money = 0
+            print("Game over! You lost everything!")
             exit()
     elif symbol == "J":
         money += 100000
         print("You win the Jackpot!")
+        print(f"End of the game. Total amount: {money}$")
+        print_board(board)
         exit()    
     
-    print(f"End of the game. Total amount: {}$")
-    print("Game over! You lost everything!")
     direction = input()
 
-
-
-
-
+print(f"End of the game. Total amount: {money}$")
+print_board(board)
 
 # Second task is from me
 
