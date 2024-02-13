@@ -14,7 +14,7 @@ def choose_coins(coins, target):
         index += 1    
 
     if target != 0:
-        print("Error")
+        return "Error"
     else:
         result = f"Number of coins to take: {sum(used_coins.values())}\n"
         
