@@ -27,7 +27,7 @@ for row_index in range(n):
 
 
 direction = input()
-
+money = 100
 
 while direction != "end":
     current_row_index, current_col_index = player_position
@@ -38,6 +38,12 @@ while direction != "end":
     if not is_in_boundaries(desired_row_index, desired_col_index, n):
         print("Game over! You lost everything!")
         exit()
+    
+    
+    symbol = board[desired_row_index][desired_col_index]
+    board
+    
+    
     
     direction = input()
 
