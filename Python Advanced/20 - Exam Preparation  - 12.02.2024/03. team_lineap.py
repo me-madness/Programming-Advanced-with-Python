@@ -15,7 +15,7 @@ def team_lineup(*args):
         result += f"{country}:\n"
         for player_name in players:
             result += f"  -{player_name}\n"
-    return result                
+    return result       # return result[:-1]               
 
 
 
