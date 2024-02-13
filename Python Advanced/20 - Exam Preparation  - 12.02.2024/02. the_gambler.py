@@ -41,10 +41,24 @@ while direction != "end":
     
     
     symbol = board[desired_row_index][desired_col_index]
-    board
+    board[desired_row_index][desired_col_index] = "G"
+    board[desired_row_index][desired_col_index] = "-"
+    player_position = [current_row_index, current_col_index]
     
+    if symbol == "W":
+        money += 100
+    elif symbol == "P":
+        money -= 200
+        if symbol <= 0:
+            money = 0
+            exit()
+    elif symbol == "J":
+        money += 100000
+        print("You win the Jackpot!")
+        exit()    
     
-    
+    print(f"End of the game. Total amount: {}$")
+    print("Game over! You lost everything!")
     direction = input()
 
 
