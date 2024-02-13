@@ -1,5 +1,5 @@
 def choose_coins(coins, target):
-    coins = coins.sort(reversed=True)
+    coins.sort(reverse=True)
     index = 0
     used_coins = {}   # coin: time_used
     
@@ -13,7 +13,14 @@ def choose_coins(coins, target):
             
         index += 1    
 
-
+    if target != 0:
+        print("Error")
+    else:
+        result = f"Number of coins to take: {sum(used_coins.values())}\n"
+        
+        for coin, count in used_coins.items():
+            result += f"{count} coin(s) with value {coin}\n"
 
 coins = [int(x) for x in input().split(", ")]
 target = int(input())
+print(choose_coins(coins, target))
