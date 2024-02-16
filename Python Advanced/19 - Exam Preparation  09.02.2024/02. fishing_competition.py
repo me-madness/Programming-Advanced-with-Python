@@ -7,7 +7,18 @@ def get_next_position(position, direction_mapper, direction, matrix):
     if 0 <= desired_row_index < len(matrix) and 0 <= desired_col_index < len(matrix):
         return desired_row_index, desired_col_index
 
-    if desired_row_index < 0
+    if desired_row_index < 0:
+        desired_row_index = len(matrix) - 1
+    elif desired_row_index >= len(matrix):
+        desired_row_index = 0
+        
+    if desired_col_index < 0:
+        desired_col_index = len(matrix) -1
+    elif desired_col_index >= len(matrix):
+        desired_col_index = 0
+        
+    return desired_row_index, desired_col_index            
+            
 
 
 n = int(input())
@@ -33,9 +44,6 @@ for row_index in range(n):
 command = input()
 
 while command != "collect the nets":    
-    current_row_index, current_col_index = position
-    row_movement, col_movement = direction_mapper[command]
-    desired_row_index = current_row_index + row_movement
-    desired_col_index = current_col_index + col_movement
+    next_row_index, next_col_index = get_next_position(position, direction_mapper, command, matrix)
     
     command = input()
