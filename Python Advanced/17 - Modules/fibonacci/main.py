@@ -1,4 +1,4 @@
-from Modules.fibonacci_sequence import create_sequence, locate_number
+from fibonacci.core import create_sequence, locate_number
 
 command = input()
 sequence = []
