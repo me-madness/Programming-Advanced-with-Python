@@ -13,8 +13,9 @@ while money_in_pocket and prices_of_foods:
         rest_money = current_money - current_price
         money_in_pocket.pop()
         prices_of_foods.popleft()
-        money_in_pocket[-1] += rest_money
         food_count +=1
+        if len(money_in_pocket) > 0:
+            money_in_pocket[-1] += rest_money
     elif current_money == current_price:
         money_in_pocket.pop()
         prices_of_foods.popleft()
@@ -26,10 +27,10 @@ while money_in_pocket and prices_of_foods:
     
 if food_count >= 4:
     print(f"Gluttony of the day! Henry ate {food_count} foods.")    
-elif 0 < food_count < 4:        
+elif 1 < food_count < 4:        
     print(f"Henry ate: {food_count} foods.")    
-    if food_count == 1:
-        print(f"Henry ate: {food_count} food.")    
+elif food_count == 1:
+    print(f"Henry ate: {food_count} food.")    
 else:
     print(f"Henry remained hungry. He will try next weekend again.")    
             
@@ -38,5 +39,5 @@ else:
 # First 
 # Input:        Output: Henry ate: 2 foods
 
-9 5 8 18        
-18 12 10 5
+# 9 5 8 18        
+# 18 12 10 5
