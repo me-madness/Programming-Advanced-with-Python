@@ -24,11 +24,19 @@ while money_in_pocket and prices_of_foods:
         prices_of_foods.popleft()   
             
     
+if food_count >= 4:
+    print(f"Gluttony of the day! Henry ate {food_count} foods.")    
+elif 0 < food_count < 4:        
+    print(f"Henry ate: {food_count} foods.")    
+    if food_count == 1:
+        print(f"Henry ate: {food_count} food.")    
+else:
+    print(f"Henry remained hungry. He will try next weekend again.")    
+            
     
-    
-    
-    
-print(f"Gluttony of the day! Henry ate {food_count} foods.")    
-print(f"Henry ate: {food_count} foods.")    
-print(f"Henry ate: {food_count} food.")    
-print(f"Henry remained hungry. He will try next weekend again.")    
+
+# First 
+# Input:        Output: Henry ate: 2 foods
+
+9 5 8 18        
+18 12 10 5
