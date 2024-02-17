@@ -20,7 +20,6 @@ def get_next_position(position, direction_mapper, direction, matrix):
     return desired_row_index, desired_col_index            
             
 
-
 n = int(input())
 
 direction_mapper = {
