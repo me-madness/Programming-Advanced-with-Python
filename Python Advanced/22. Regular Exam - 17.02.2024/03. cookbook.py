@@ -8,7 +8,6 @@ def cookbook(*args):
     result = ""
     
     sorted_order_list = sorted(orders_list.items(), key=lambda kvp: (-len(kvp[1]), kvp[0]))
-
     for country, cuisine_two in sorted_order_list:
         cuisine_count = len(cuisine_two) 
         result += f"{country} cuisine contains {cuisine_count} recipes:\n"
@@ -30,13 +29,13 @@ print(cookbook(
 #     ))
 
 
-# print(cookbook(
-#     ("Spaghetti Bolognese", "Italian", ["spaghetti", "tomato sauce", "ground beef"]),
-#     ("Margherita Pizza", "Italian", ["pizza dough", "tomato sauce", "mozzarella"]),
-#     ("Tiramisu", "Italian", ["ladyfingers", "mascarpone", "coffee"]),
-#     ("Croissant", "French", ["flour", "butter", "yeast"]),
-#     ("Ratatouille", "French", ["eggplant", "zucchini", "tomatoes"]),
-#     ("Sushi Rolls", "Japanese", ["rice", "nori", "fish", "vegetables"]),
-#     ("Miso Soup", "Japanese", ["tofu", "seaweed", "green onions"]),
-#     ("Guacamole", "Mexican", ["avocado", "tomato", "onion", "lime"])
-#     ))
+print(cookbook(
+    ("Spaghetti Bolognese", "Italian", ["spaghetti", "tomato sauce", "ground beef"]),
+    ("Margherita Pizza", "Italian", ["pizza dough", "tomato sauce", "mozzarella"]),
+    ("Tiramisu", "Italian", ["ladyfingers", "mascarpone", "coffee"]),
+    ("Croissant", "French", ["flour", "butter", "yeast"]),
+    ("Ratatouille", "French", ["eggplant", "zucchini", "tomatoes"]),
+    ("Sushi Rolls", "Japanese", ["rice", "nori", "fish", "vegetables"]),
+    ("Miso Soup", "Japanese", ["tofu", "seaweed", "green onions"]),
+    ("Guacamole", "Mexican", ["avocado", "tomato", "onion", "lime"])
+    ))
