@@ -10,4 +10,5 @@ class Phone:
     
 
 p1 = Phone( color:"Green", size: 2)
+p2 = Phone( color:"Red", size: 12)
 a = 5    
