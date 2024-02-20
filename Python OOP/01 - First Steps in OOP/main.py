@@ -24,4 +24,18 @@ class Animal:
     
     
 animal = Animal("cat")     
-print(animal.sleep())   
+print(animal.sleep())  
+
+
+class Person():
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age 
+        
+        
+    def eat(self):
+        return 'eating'
+    
+    
+person = Person("Test", 12)
+print(person.eat())        
