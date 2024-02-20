@@ -10,6 +10,18 @@ class Phone:
     
 
 p1 = Phone("Green", 2)
-p2 = Phone("Red", 12)
-a = 5    
+p2 = Phone("Red", 12)   
 print(p1.turn_on())
+
+
+class Animal:
+    def __init__(self, name):
+        self.name = name
+        
+     
+    def sleep(self):
+        return 'sleeping'
+    
+    
+animal = Animal("cat")     
+print(animal.sleep())   
