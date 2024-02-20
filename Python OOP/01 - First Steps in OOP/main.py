@@ -9,7 +9,7 @@ class Phone:
         return 'The phone is turned on'    
     
 
-p1 = Phone(color="Green", size= 2)
-p2 = Phone(color="Red", size= 12)
+p1 = Phone("Green", 2)
+p2 = Phone("Red", 12)
 a = 5    
 print(p1.turn_on())
