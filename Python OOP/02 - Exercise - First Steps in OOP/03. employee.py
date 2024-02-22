@@ -1,4 +1,6 @@
 class Employee:
+    MONTHS = 12
+    
     def __init__(self, _id: int, first_name: str, last_name: str, salary: float) -> None:
         self.id = _id
         self.first_name = first_name
@@ -6,16 +8,17 @@ class Employee:
         self.salary = salary
 
 
-    def get_full_name(self, first_name, last_name):
-        pass
+    def get_full_name(self) -> str:
+        return self.first_name + " " + self.last_name
 
 
-    def get_annual_salary(self):
-        pass
+    def get_annual_salary(self) -> float:
+        return self.salary * self.MONTHS   # or Employee.MONTHS
     
     
-    def raise_salary(self):
-        pass    
+    def raise_salary(self, amount: float) -> float:
+        self.salary += amount
+        return self.salary    
 
 employee = Employee(744423129, "John", "Smith", 1000)
 print(employee.get_full_name())
