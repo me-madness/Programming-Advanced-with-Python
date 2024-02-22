@@ -1,14 +1,32 @@
+from typing import List
+
 class SteamUser:
-    def __init__(self, username: str, games: str, played_hours: int) -> None:
-        pass
+    def __init__(self, username: str, games: List[str]) -> None:
+        self.username = username
+        self.games = games
+        self.played_hours: int = 0
     
     
-    def buy_game(self):
-        pass
+    def play(self, game_name: str, hours: int) -> str:
+        if game_name not in self.games:
+            return f"{game_name} is not in library"
+        
+        self.played_hours += hours
+            
+        return f"{self.username} is playing {game_name}"
+    
+    
+    def buy_game(self, game_name: str) -> str:
+        if game_name in self.games:
+            return f"{self.game} is already in your library"
+            
+        self.games.append()(game_name)
+            
+        return f"{self.username} bought {game_name}"
     
     
     def status(self):
-        pass
+        return f"{self.username} has {len(self.games)} games. Total play time: {self.played_hours}"
     
     
 user = SteamUser("Peter", ["Rainbow Six Siege", "CS:GO", "Fortnite"])
