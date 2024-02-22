@@ -33,18 +33,22 @@ class Trainer:
         #     return "Pokemon is not caught"
         
         
-        ## Option 3
-        
-        
-        
+        ## Option 3 -> fast and short
+        try:
+            pokemon = next(filter(lambda p: p.name == pokemon_name, self.pokemons))
+        except StopIteration:
+            return "Pokemon is not caught"
         
         self.pokemons.remove(pokemon)    
     
-        return f"Tou have released {pokemon_name}"
+        return f"You have released {pokemon_name}"
     
     
-    def trainer_data(self):
-        pass
+    def trainer_data(self) -> str:
+        pokemon_data = '\n'.join(f"-{p.pokemon_details()}" for p in self.pokemons)
+        return f"Pokemon Trainer {self.name}\n" \
+               f" Pokemon count {len(self.pokemons)}\n" \
+               f"{pokemon_data}"    
     
     
 pokemon = Pokemon("Pikachu", 90)
