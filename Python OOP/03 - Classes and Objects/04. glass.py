@@ -1,6 +1,6 @@
 class Glass:
     def __init__(self) -> None:
-        pass
+        self.content = 0
     
     
     def fill(self):
@@ -8,7 +8,7 @@ class Glass:
 
 
     def empty(self):
-        pass
+        return f"Glass is now empty"
     
     
     def info(self):
