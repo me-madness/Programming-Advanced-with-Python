@@ -1,10 +1,14 @@
 class Smartphone:
-    def __init__(self) -> None:
-        pass
+    def __init__(self, memory) -> None:
+        self.memory = memory
+        self.apps = []
+        self.is_on = False
     
     
     def power(self):
-        pass
+        if not self.is_on:
+            self.is_on = True
+        self.is_on = False    
     
     
     def power(self):
