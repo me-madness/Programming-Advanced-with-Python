@@ -1,7 +1,7 @@
 class Point:
-    def __init__(self, x: int, y: int) -> None:
-        self.x = x
-        self.y = y
+    def __init__(self, _x: int, _y: int) -> None:
+        self.x = _x
+        self.y = _y
     
     
     def set_x(self):
