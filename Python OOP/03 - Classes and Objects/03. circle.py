@@ -1,18 +1,19 @@
 class Circle:
+    pi = 3.14
     def __init__(self, radius: int) -> None:
-        pass
+        self.radius = radius
     
     
-    def set_radius(self):
-        pass
+    def set_radius(self, new_radius: int):
+        self.radius = new_radius
     
     
     def get_area(self):
-        pass
+        return Circle.pi * self.radius * self.radius
     
     
     def get_circumference(self):
-        pass
+        return 2 * Circle.pi * self.radius
     
     
 circle = Circle(10)
