@@ -1,19 +1,19 @@
 class Point:
-    def __init__(self, _x: int, _y: int) -> None:
-        self.x = _x
-        self.y = _y
+    def __init__(self, x: int, y: int) -> None:
+        self.x = x
+        self.y = y
     
     
-    def set_x(self):
-        pass
+    def set_x(self, new_x):
+        self.x = new_x
     
     
-    def set_y(self):
-        pass
+    def set_y(self, new_y):
+        self.y = new_y
     
     
     def __str__(self) -> str:
-        pass
+        return f"The point has coordinates ({self.x},{self.y})"
     
     
 p = Point(2, 4)
