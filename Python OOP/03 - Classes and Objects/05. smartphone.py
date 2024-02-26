@@ -1,5 +1,5 @@
 class Smartphone:
-    def __init__(self, memory) -> None:
+    def __init__(self, memory: int) -> None:
         self.memory = memory
         self.apps = []
         self.is_on = False
@@ -12,7 +12,7 @@ class Smartphone:
             self.is_on = False    
     
     
-    def install(self, app, app_memory):
+    def install(self, app: str, app_memory: int):
         if self.memory >= app_memory and self.is_on:
             self.apps.append(app)
             self.memory -= app_memory
