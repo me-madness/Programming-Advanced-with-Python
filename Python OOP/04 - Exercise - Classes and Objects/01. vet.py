@@ -4,7 +4,7 @@ class Vet:
     
     def __init__(self,vet_name: str) -> None:
         self.name = vet_name
-        self.animals: List[str] = []
+        self.animals: list[str] = []
         
         
     def register_animal(self, animal_name: str) -> str:
