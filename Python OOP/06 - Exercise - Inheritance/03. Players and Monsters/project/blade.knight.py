@@ -1,4 +1,4 @@
-from project.knight import Knight
+from project.dark_knight import DarkKnight
 
-class BladeKnight(Knight):
+class BladeKnight(DarkKnight):
     pass

@@ -1,4 +1,4 @@
-from project.wizard import Wizard
+from project.dark_wizard import DarkWizard
 
-class SoulMaster(Wizard):
+class SoulMaster(DarkWizard):
     pass
