@@ -8,7 +8,7 @@ class Product:
         self.quantity += quantity
     
     
-    def decrease(self, quantity; int) -> None:
+    def decrease(self, quantity: int) -> None:
         if quantity <= self.quantity:
             self.quantity -= quantity
     
