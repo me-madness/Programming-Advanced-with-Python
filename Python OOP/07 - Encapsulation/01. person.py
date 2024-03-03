@@ -10,7 +10,7 @@ class Person:
       
       
       def get_name(self):
-          self.__name
+          return self.__name
           
           
 person = Person("George", 32)
