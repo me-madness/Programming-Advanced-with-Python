@@ -30,3 +30,13 @@ class Profile:
         if not is_length_valid or not is_digit_presented or not is_upper_case_presented:
             raise ValueError("The password must be 8 or more characters with at least 1 digit and 1 uppercase letter.")
         self.__password = value
+        
+        
+    def __str__(self) -> str:
+        return f'You have a profile with username: "{self.username}" and password; "{"*" * len(self.password)}"' 
+    
+    
+profile_with_invalid_password = Profile('My_username', 'My-password')
+profile_with_invalid_username = Profile('Too_long_username', 'Any')
+correct_profile = Profile("Username", "Passw0rd")
+print(correct_profile)      
