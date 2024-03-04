@@ -11,7 +11,7 @@ class Profile:
     
     @username.setter
     def username(self, value: int):
-        if value < 5 or value > 15:
+        if len(value) < 5 or len(value) > 15:
              raise ValueError("The username must be between 5 and 15 characters.")
         self.__username = value
         
