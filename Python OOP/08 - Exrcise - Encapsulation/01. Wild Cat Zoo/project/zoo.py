@@ -36,3 +36,31 @@ class Zoo:
     
     def animals_status(self):
         pass
+    
+    
+    def __repr__(self) -> str:
+        return f"You have {total_animals_count} animals
+                    {amount_of_lions} Lions:{lion1} 
+                    {lionN}
+                    {amount_of_tigers} Tigers:
+                    {tiger1}
+                    {tigerN}
+                    {amount_of_cheetahs} Cheetahs:
+                    {cheetah1}
+                    {cheetahN}"
+
+
+print(zoo.hire_worker(worker))
+
+# Tending animals
+print(zoo.tend_animals())
+
+# Paying keepers
+print(zoo.pay_workers())
+
+# Fireing worker
+print(zoo.fire_worker("Adam"))
+
+# Printing statuses
+print(zoo.animals_status())
+print(zoo.workers_status())
