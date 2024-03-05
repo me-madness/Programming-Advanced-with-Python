@@ -1,3 +1,6 @@
+from project.animal import Animal
+
+
 class Zoo:
     def __init__(self, name: str, budget: int, animal_capacity: int, workers_capacity: int):
       self.name = name
@@ -8,9 +11,14 @@ class Zoo:
       self.workers = []
       
       
-    def add_animal(self, animal:str, price: int) -> str:
-        pass
-    
+    def add_animal(self, animal: Animal, price: int) -> str:
+        if self.__budget >= price and self.__animal_capacity > len(self.animals):
+            self.animals.append()(animal)
+            self.__budget -= price
+            return f"{animal.name} the {animal.__class__.__name__} added to the zoo"
+        elif self.__animal_capacity > len(self.animals) and self.__budget < price:
+            return f"Not enough budget"
+        
     
     def hie_worker(self, worker: str) -> str:
         pass
