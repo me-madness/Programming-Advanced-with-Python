@@ -44,7 +44,7 @@ class Zoo:
         
         if money_to_pay <= self.__budget:
             self.__budget -= money_to_pay
-            return f"You payed your workers. They are happy. Budget left: {left_budget}"
+            return f"You payed your workers. They are happy. Budget left: {self.__budget}"
         return f"You have no budget to pay your workers. They are unhappy"
     
     
