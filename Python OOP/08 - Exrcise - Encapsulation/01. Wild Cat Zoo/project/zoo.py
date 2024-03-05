@@ -1,3 +1,4 @@
+# from typing import List
 from project.animal import Animal
 from project.worker import Worker
 
@@ -8,8 +9,8 @@ class Zoo:
       self.__budget = budget
       self.__animal_capacity = animal_capacity
       self.__workers_capacity = workers_capacity
-      self.animals = []
-      self.workers = []
+      self.animals: list[Animal] = []
+      self.workers: list[Worker] = []
       
       
     def add_animal(self, animal: Animal, price: int) -> str:
@@ -30,7 +31,12 @@ class Zoo:
 
     
     def fire_worker(self, worker_name: str) -> str:
-        pass
+        try:
+            worker = [w for w in self.workers if w.name == worker_name][0]
+            self.workers.remove(worker)
+            return f"{worker_name} fired successfully"
+        except IndexError:
+            return f"There is no {worker_name} in the zoo"
     
     
     def pay_workers(self):
