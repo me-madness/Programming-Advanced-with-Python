@@ -40,7 +40,11 @@ class Zoo:
     
     
     def pay_workers(self):
-        return f"You payed your workers. They are happy. Budget left: {left_budget}"
+        money_to_pay = sum([w.salary for w in self.workers])
+        
+        if money_to_pay <= self.__budget:
+            self.__budget -= money_to_pay
+            return f"You payed your workers. They are happy. Budget left: {left_budget}"
         return f"You have no budget to pay your workers. They are unhappy"
     
     
