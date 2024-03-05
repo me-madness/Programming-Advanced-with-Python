@@ -68,15 +68,13 @@ class Zoo:
         result += f"----- {amount_of_lions} Lions:\n"
         for lion in lions:
             result += f"{lion}\n"
-            
-            
+                 
         tigers = [t for t in self.animals if t.__class__.__name__ == "Tiger"]
         amount_of_tigers = len(tigers)
         result += f"----- {amount_of_tigers} Tigers:\n"
         for tiger in tigers:
             result += f"{tiger}\n"
-            
-            
+                 
         cheetahs = [c for c in self.animals if c.__class__.__name__ == "Cheetah"]
         amount_of_cheetahs = len(cheetahs)
         result += f"----- {amount_of_cheetahs} Cheetahs:\n"
@@ -97,17 +95,17 @@ class Zoo:
         for k in keepers:
             result += f"{k}\n"
         
-        
         result += f"----- {len(caretakers)} Caretakers:\n"
         for c in caretakers:
             result += f"{c}\n"
-            
-            
+               
         result += f"----- {len(vets)} Vet:\n"
         for v in vets:
             result += f"{v}\n"    
         
-
+        return result
+    
+    
 print(zoo.hire_worker(worker))
 
 # Tending animals
