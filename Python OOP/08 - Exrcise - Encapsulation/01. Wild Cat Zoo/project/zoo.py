@@ -57,8 +57,8 @@ class Zoo:
         return f"You have no budget to tend the animals. They are unhappy."
     
     
-    def profit(self, amount: int):
-        pass
+    def profit(self, amount: int) -> None:
+        self.__budget += amount
     
     
     def animals_status(self):
