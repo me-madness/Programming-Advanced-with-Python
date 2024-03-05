@@ -87,9 +87,26 @@ class Zoo:
     
       
     def worker_status(self) -> str:
-        result = f"You have {len(self.workers)} workers"
+        result = f"You have {len(self.workers)} workers\n"
     
-    
+        keepers = [w for w in self.workers if w.__class__.__name__ == "Keeper"]
+        caretakers = [w for w in self.workers if w.__class__.__name__ == "Caretaker"]
+        vets = [w for w in self.workers if w.__class__.__name__ == "Vets"]
+        
+        result += f"----- {len(keepers)} Keepers:\n"
+        for k in keepers:
+            result += f"{k}\n"
+        
+        
+        result += f"----- {len(caretakers)} Caretakers:\n"
+        for c in caretakers:
+            result += f"{c}\n"
+            
+            
+        result += f"----- {len(vets)} Vet:\n"
+        for v in vets:
+            result += f"{v}\n"    
+        
 
 print(zoo.hire_worker(worker))
 
