@@ -1,4 +1,5 @@
 from project.animal import Animal
+from project.worker import Worker
 
 
 class Zoo:
@@ -18,10 +19,13 @@ class Zoo:
             return f"{animal.name} the {animal.__class__.__name__} added to the zoo"
         elif self.__animal_capacity > len(self.animals) and self.__budget < price:
             return f"Not enough budget"
-        
+        return "Not enough space for animal"
     
-    def hie_worker(self, worker: str) -> str:
-        pass
+    
+    def hire_worker(self, worker: Worker) -> str:
+        if self.__workers_capacity > len(self.workers):
+            self.workers.append(worker)
+            return f"{worker.name} the {worker.__class__.__name__} hired successfully"
     
     
     def fire_worker(self, worker_name: str) -> str:
