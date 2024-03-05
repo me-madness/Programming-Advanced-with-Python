@@ -61,21 +61,35 @@ class Zoo:
         self.__budget += amount
     
     
-    def animals_status(self):
-        pass
+    def animals_status(self) -> str:
+        result = f"You have {len(self.animals)} animals\n"
+        lions = [a for a in self.animals if a.__class__.__name__ == "Lion"]
+        amount_of_lions = len(lions)
+        result += f"----- {amount_of_lions} Lions:\n"
+        for lion in lions:
+            result += f"{lion}\n"
+            
+            
+        tigers = [t for t in self.animals if t.__class__.__name__ == "Tiger"]
+        amount_of_tigers = len(tigers)
+        result += f"----- {amount_of_tigers} Tigers:\n"
+        for tiger in tigers:
+            result += f"{tiger}\n"
+            
+            
+        cheetahs = [c for c in self.animals if c.__class__.__name__ == "Cheetah"]
+        amount_of_cheetahs = len(cheetahs)
+        result += f"----- {amount_of_cheetahs} Cheetahs:\n"
+        for cheetah in cheetahs:
+            result += f"{cheetah}\n"    
+         
+        return result  
+    
+      
+    def worker_status(self) -> str:
+        result = f"You have {len(self.workers)} workers"
     
     
-    def __repr__(self) -> str:
-        return f"You have {total_animals_count} animals
-                    {amount_of_lions} Lions:{lion1} 
-                    {lionN}
-                    {amount_of_tigers} Tigers:
-                    {tiger1}
-                    {tigerN}
-                    {amount_of_cheetahs} Cheetahs:
-                    {cheetah1}
-                    {cheetahN}"
-
 
 print(zoo.hire_worker(worker))
 
