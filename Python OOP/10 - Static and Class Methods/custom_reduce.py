@@ -7,7 +7,8 @@ def custom_reduce(func, iterable):
     accumulator = iterable[0]
     
     for i in range(1, len(iterable), args_count - 1):
-        pass
+        args_to_pass = iterable[i:i+args_count -1]
+        accumulator = func(accumulator, *args_to_pass)
+        
     
-custom_reduce(lambda x, y: x * y, [1, 2, 3])    
-    
+custom_reduce(lambda x, y: x * y, [2, 3, 4])    
