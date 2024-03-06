@@ -28,6 +28,7 @@ class Integer:
         return cls(int_sum)
     
     
+    @classmethod
     def from_string(cls, value: str):
         if not isinstance(value, str):
             return "wrong type"
