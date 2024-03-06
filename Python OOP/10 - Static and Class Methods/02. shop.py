@@ -14,8 +14,8 @@ class Shop:
         return cls(name, type_shop, 10)
     
     
-    def add_items(self, item_name: str) -> str:
-        if sum(self.items().values()) >= self.capacity:
+    def add_item(self, item_name: str) -> str:
+        if sum(self.items.values()) >= self.capacity:
             return f"Not enough capacity in the shop"
         
         self.items[item_name] = self.items.get(item_name, 0) + 1
@@ -34,7 +34,7 @@ class Shop:
         
         self.items[item_name] -= amount
         
-        if self.items(item_name) == 0:
+        if self.items[item_name] == 0:
             del self.items[item_name] 
                
         return f"{amount} {item_name} removed from the shop"
@@ -45,4 +45,13 @@ class Shop:
    
 fresh_shop = Shop("Fresh Shop", "Fruit and Veg", 50)
 small_shop = Shop.small_shop("Fashion Boutique", "Clothes")
-print(fresh_shop)   
+print(fresh_shop) 
+print(small_shop)
+
+print(fresh_shop.add_item("Bananas"))
+print(fresh_shop.remove_item("Tomatoes", 2))
+
+print(small_shop.add_item("Jeans"))
+print(small_shop.add_item("Jeans"))
+print(small_shop.remove_item("Jeans", 2))
+print(small_shop.items)  
