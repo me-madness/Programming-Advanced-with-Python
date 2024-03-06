@@ -23,11 +23,21 @@ class Shop:
         return f"{item_name} added to the shop"
     
     
-    @classmethod
-    def remove_item(cls, item_name: str, amount: int) -> None:
+    def remove_item(self, item_name: str, amount: int) -> str:
+        product_quantity = self.items.get(item_name)
+        
+        if not product_quantity:
+            return f"Cannot remove {amount} {item_name}"
+        
+        if amount > product_quantity:    
+            return f"Cannot remove {amount} {item_name}"
+        
+        self.items[item_name] -= amount
+        
+        if self.items(item_name) == 0:
+            del self.items[item_name] 
+               
         return f"{amount} {item_name} removed from the shop"
-    return f"Cannot remove {amount} {item_name}"
-    
     
     def __repr__(self) -> str:
        return f"{shop_name} of type {shop_type} with capacity {shop_capacity}"    
