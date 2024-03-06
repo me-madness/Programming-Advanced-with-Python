@@ -10,15 +10,15 @@ class Calculator:
     
     @staticmethod
     def multiply(*nums) -> int:
-        return reduce(lambda x, y: x - y)
+        return reduce(lambda x, y: x - y, nums)
     
     @staticmethod
     def divide(*nums) -> float:
-        return reduce(lambda x, y: x / y)
+        return reduce(lambda x, y: x / y, nums)
     
     @staticmethod
     def subtract(*nums) -> int:
-        return reduce(lambda x, y: x * y)
+        return reduce(lambda x, y: x * y, nums)
     
     
 print(Calculator.add(5, 10, 4))
