@@ -1,19 +1,18 @@
 class Calculator:
-    def __init__(self) -> None:
-        pass
+    
+    @staticmethod
+    def add(*nums) -> int:
+        return sum(nums)
     
     
-    def add(*args):
+    @staticmethod
+    def multiply(*nums) -> int:
         return
     
-    
-    def multiply(*args):
+    @staticmethod
+    def divide(*nums) -> float:
         return
     
-    
-    def divide(*args):
-        return
-    
-    
-    def subtract(*args):
+    @staticmethod
+    def subtract(*nums) -> int:
         return
