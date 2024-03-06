@@ -14,11 +14,17 @@ class Integer:
     
     
     @classmethod
-    def from_roman(cls, value: int):
+    def from_roman(cls, value: str):
+        int_sum = 0
         
+        for i in range(len(value)):
+            if i != 0 and cls.ROMAN[value[i]] > cls.ROMAN[value[i - 1]]:
+                pass
+        
+        return cls(int_sum)
     
     
-    def from_string(cls, value: int):
+    def from_string(cls, value: str):
         if not isinstance(value, str):
             return "wrong type"
         
