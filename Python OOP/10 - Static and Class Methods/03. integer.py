@@ -1,4 +1,7 @@
 class Integer:
+    ROMAN = {'I': 1, 'V': 5, 'X': 10, 'L':  50, 'C': 100, 'D': 500, 'M': 1000}
+    
+    
     def __init__(self, value: int) -> None:
         self.value = value
         
@@ -12,7 +15,7 @@ class Integer:
     
     @classmethod
     def from_roman(cls, value: int):
-        pass
+        
     
     
     def from_string(cls, value: int):
