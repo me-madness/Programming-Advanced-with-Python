@@ -4,6 +4,7 @@ class Integer:
     
     def __init__(self, value: int) -> None:
         self.value = value
+       
         
     @classmethod    
     def from_float(cls, value: int):
@@ -19,8 +20,11 @@ class Integer:
         
         for i in range(len(value)):
             if i != 0 and cls.ROMAN[value[i]] > cls.ROMAN[value[i - 1]]:
-                pass
-        
+                int_sum += cls.ROMAN[value[i]] - 2 * cls.ROMAN[value[i - 1]]
+            else:
+                int_sum += cls.ROMAN[value[i]]
+                
+                
         return cls(int_sum)
     
     
