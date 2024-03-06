@@ -1,3 +1,6 @@
+from functools import reduce
+
+
 class Calculator:
     
     @staticmethod
@@ -7,12 +10,18 @@ class Calculator:
     
     @staticmethod
     def multiply(*nums) -> int:
-        return
+        return reduce(lambda x, y: x - y)
     
     @staticmethod
     def divide(*nums) -> float:
-        return
+        return reduce(lambda x, y: x / y)
     
     @staticmethod
     def subtract(*nums) -> int:
-        return
+        return reduce(lambda x, y: x * y)
+    
+    
+print(Calculator.add(5, 10, 4))
+print(Calculator.multiply(1, 2, 3, 5))
+print(Calculator.divide(100, 2))
+print(Calculator.subtract(90, 20, -50, 43, 7))    
