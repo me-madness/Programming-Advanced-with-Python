@@ -1,1 +1,3 @@
-{\rtf1}
+class PhotoAlbum:
+    def __init__(self) -> None:
+        pass
