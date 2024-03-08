@@ -26,15 +26,8 @@ class WarRobot(Robot):
 
 
 def number_of_robot_sensors(robot):
-    if isinstance(robot, Robot):
-        print(robot.sensors_amount())
-    if isinstance(robot, MedicalRobot):
-        print(robot.medical_robot_sensors_amount())
-    elif isinstance(robot, ChefRobot):
-        print(robot.chef_robot_sensors_amount())
-    elif isinstance(robot, WarRobot):
-        print(robot.war_robot_sensors_amount())
-
+    print(robot.sensors_amount())
+   
 
 basic_robot = Robot('Robo')
 da_vinci = MedicalRobot('Da Vinci')
