@@ -9,19 +9,19 @@ class Robot:
 
 class MedicalRobot(Robot):
     @staticmethod
-    def medical_robot_sensors_amount():
+    def sensors_amount():
         return 6
 
 
 class ChefRobot(Robot):
     @staticmethod
-    def chef_robot_sensors_amount():
+    def sensors_amount():
         return 4
 
 
 class WarRobot(Robot):
     @staticmethod
-    def war_robot_sensors_amount():
+    def sensors_amount():
         return 12
 
 
