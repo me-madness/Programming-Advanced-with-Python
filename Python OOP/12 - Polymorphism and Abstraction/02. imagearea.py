@@ -6,3 +6,15 @@ class ImageArea:
         
     def get_area(self):
         return self.width * self.height    
+    
+    
+    def __lt__(self, other):
+        return self.get_area() < other.get_area()
+    
+    
+    def __le__(self, other):
+        return self.get_area() <= other.get_area()
+    
+    
+    def __eq__(self, other):
+        return self.get_area() == other.get_area()
