@@ -17,4 +17,4 @@ print(start_playing(children))
 
 
 guitar = Guitar()
-print(start_playing)
+print(start_playing(guitar))
