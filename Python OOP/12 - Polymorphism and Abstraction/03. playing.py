@@ -9,4 +9,12 @@ class Guitar:
     
 class Children:
     def play(self):
-        return ""    
+        return "Children are playing"    
+    
+    
+children = Children()
+print(start_playing(children))    
+
+
+guitar = Guitar()
+print(start_playing)
