@@ -1,4 +1,5 @@
 from abc import ABC
+import abc
 
 class Vehicle(ABC):
     def __init__(self, fuel_quantity: float, fuel_consumption: float) -> None:
@@ -6,12 +7,12 @@ class Vehicle(ABC):
         self.fuel_consumption = fuel_consumption
         
         
-    @abstractmethod
+    @abc.abstractmethod
     def drive(self, distance: float) -> None:
         ...
         
     
-    @abstractmethod    
+    @abc.abstractmethod    
     def refuel(self, fuel: float) -> None:
         pass    
             
@@ -44,4 +45,16 @@ class Truck(Vehicle):
             
             
     def refuel(self, fuel: float) -> None:
-        self.fuel_quantity += fuel * self.TANK_PERCENTAGE_FILL        
+        self.fuel_quantity += fuel * self.TANK_PERCENTAGE_FILL      
+        
+        
+car = Car(20, 5)
+car.drive(3)
+print(car.fuel_quantity)
+car.refuel(10)
+print(car.fuel_quantity)
+truck = Truck(100, 15)
+truck.drive(5)
+print(truck.fuel_quantity)
+truck.refuel(50)
+print(truck.fuel_quantity)        
