@@ -8,10 +8,18 @@ class Vehicle(ABC):
         
     @abstractmethod
     def drive(self, distance: float):
-        ...
+        pass
         
     
     @abstractmethod    
     def refuel(self, fuel: float):
         pass    
             
+            
+class Car(Vehicle):
+    CONDITIONER_ON: float = 0.9
+
+
+class Truck(Vehicle):
+    CONDITIONER_ON: float = 1.6
+    
