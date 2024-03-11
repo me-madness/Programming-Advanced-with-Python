@@ -17,7 +17,7 @@ class Account:
         if self.balance + transaction_amount < 0:
             raise ValueError("sorry cannot go in debt")  
         
-        self._transaction.append()(transaction_amount)
+        self._transaction.append(transaction_amount)
         
         return f"New balance: {self.balance}"
     
@@ -60,7 +60,7 @@ class Account:
         return self.balance == other.balance
     
     
-    def __add_(self, other):
+    def __add__(self, other):
         new_account = Account(f"{self.owner}&{other.owner}", self.amount + other.amount)
         new_account._transaction = self._transaction + other._transaction
         
