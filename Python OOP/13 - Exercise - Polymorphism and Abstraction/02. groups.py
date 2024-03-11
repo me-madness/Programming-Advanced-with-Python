@@ -1,3 +1,5 @@
+from typing import List
+
 class Person:
     def __init__(self, name: str, surname: str) -> None:
         self.name = name
@@ -13,9 +15,9 @@ class Person:
     
     
 class Group:
-    def __init__(self, name: str, people: list[Person]):
-      self.name = name
-      self.people = people  
+    def __init__(self, name: str, people: List[Person]):
+        self.name = name
+        self.people = people  
       
       
     def __len__(self):
