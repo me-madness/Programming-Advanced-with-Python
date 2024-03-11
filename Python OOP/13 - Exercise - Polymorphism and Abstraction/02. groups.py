@@ -32,7 +32,7 @@ class Group:
         return f"Group {self.name} with members {', '.join(str(p) for p in self.people)}"
     
     
-    def __getitem(self, idx: int):
+    def __getitem__(self, idx: int):
         return f"Person {idx}: {str(self.people[idx])}"
     
     
