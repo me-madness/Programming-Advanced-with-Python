@@ -9,6 +9,10 @@ class Book:
 
     def turn_page(self, page):
         self.page = page
+        
+        
+    def __repr__(self) -> str:
+        return f"Title {self.title} by {self.author}"    
 
 
 class Library:
