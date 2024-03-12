@@ -1,10 +1,10 @@
 from typing import List
 
 class Book:
-    def __init__(self, title, author, location):
+    def __init__(self, title, author):
         self.title = title
         self.author = author
-        self.location = location
+        # self.location = location
         self.page = 0
 
     def turn_page(self, page):
@@ -17,7 +17,7 @@ class Book:
 
 class Library:
     def __init__(self, books) -> None:
-        self.books: List[Book] = books
+        self.books: list[Book] = books
         
         
     def add_book(self, book: Book):   
@@ -49,12 +49,12 @@ class Library:
         return books
     
     
-if __name__ == "__name__":
-    book1 = Book("1", "a")    
+if __name__ == "__main__":
+    book = Book("1", "a")    
     book2 = Book("2", "b")    
     book3 = Book("3", "c")    
     
-    lib = Library([book1, book2, book3])
+    lib = Library([book, book2, book3])
     
     print(lib.get_books_by_title("1"))
     print(lib.get_books_by_author("a"))
@@ -65,4 +65,4 @@ if __name__ == "__name__":
     print(lib.get_books_by_title("4"))
     
     print(lib.get_books_by_author("5"))
-    print(lib.get_books_by_title("non"))   
+    # print(lib.get_books_by_title("non"))   
