@@ -1,3 +1,5 @@
+from typing import List
+
 class Book:
     def __init__(self, title, author, location):
         self.title = title
@@ -7,3 +9,13 @@ class Book:
 
     def turn_page(self, page):
         self.page = page
+
+
+class Library:
+    def __init__(self, books) -> None:
+        self.books: List[Book] = books
+        
+        
+    def add_book(self, book: Book):   
+        self.books.append(book)
+        
