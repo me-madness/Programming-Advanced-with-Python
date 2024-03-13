@@ -1,4 +1,12 @@
-class Animal:
+from abc import ABC, abstractmethod
+
+class Animal(ABC):
+    
+    @abstractmethod
+    def make_sound(self):
+        pass
+    
+    
     def __init__(self, species):
         self.species = species
 
@@ -14,6 +22,16 @@ def animal_sound(animals: list):
             print('woof-woof')
 
 
+class Cat(Animal):
+    def make_sound(self):
+        return "meow"
+
+
+class Dog(Animal):
+    def make_sound(self):
+        return "meow"
+    
+        
 animals = [Animal('cat'), Animal('dog')]
 animal_sound(animals)
 
