@@ -11,7 +11,7 @@ class Animal(ABC):
         self.species = species
 
     def get_species(self):
-        return self.species
+        return self.__class__.__name__.lower()
 
 
 def animal_sound(animals: list):
@@ -29,7 +29,7 @@ class Cat(Animal):
 
 class Dog(Animal):
     def make_sound(self):
-        return "meow"
+        return "bark bark"
     
         
 animals = [Animal('cat'), Animal('dog')]
