@@ -1,7 +1,7 @@
 class countdown_iterator:
     
-    def __init__(self) -> None:
-        pass
+    def __init__(self, count: int) -> None:
+        self.count = count + 1
 
     
     def __iter__(self):
@@ -9,9 +9,12 @@ class countdown_iterator:
     
     
     def __next__(self):
-        pass
-
-
+        if self.count <= 0:
+            raise StopIteration
+        
+        self.count -= 1
+        
+        return self.count
 
 
 # First input
