@@ -3,6 +3,7 @@ class sequence_repeat:
     def __init__(self, sequence: str, number: int) -> None:
         self.sequence = sequence
         self.number = number
+        self.idx = -1
         
         
     def __iter__(self):
