@@ -1,7 +1,7 @@
 class sequence_repeat:
     
-    def __init__(self, sequance: int, number: int) -> None:
-        self.sequance = sequance
+    def __init__(self, sequence: str, number: int) -> None:
+        self.sequence = sequence
         self.number = number
         
         
@@ -9,14 +9,13 @@ class sequence_repeat:
         return self    
 
 
-
     def __next__(self):
-        if self.
+        if self.idx == self.number -1:
             raise StopIteration
         
-        self.
+        self.idx += 1 
         
-        return self.
+        return self.sequence[self.idx % len(self.sequence)]
 
 
 # First input 
