@@ -1,4 +1,5 @@
 class take_skip:
+    
     def __init__(self, step: int, count: int) -> None:
         self.step = step
         self.count = count
@@ -9,7 +10,6 @@ class take_skip:
         return self    
   
   
-    
     def __next__(self):
         if self.iterations == self.count -1:
             raise StopIteration
@@ -18,9 +18,6 @@ class take_skip:
         
         return self.iterations * self.step
         
-
-
-
 
 # First input
 numbers = take_skip(2, 6)
