@@ -12,4 +12,5 @@ def hello_function():
     return say_hi
 
 
-print(hello_function)    
+hello = hello_function()
+print(hello())    
