@@ -24,4 +24,15 @@ def print_message(message):
     message_sender()
     
     
-print_message("Some random message")        
+print_message("Some random message") 
+
+
+# Decorator
+
+def uppercase(function):
+    def wrapper():
+        result = function()
+        uppercase_result = result.upper()
+        return uppercase_result
+    
+    return wrapper      
