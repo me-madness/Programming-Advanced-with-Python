@@ -36,3 +36,11 @@ def uppercase(function):
         return uppercase_result
     
     return wrapper      
+
+
+def say_hi():
+    return "hello there"
+
+
+result = uppercase(say_hi)
+print(result)
