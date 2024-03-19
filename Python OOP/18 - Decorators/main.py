@@ -42,5 +42,22 @@ def say_hi():
     return "hello there"
 
 
-result = uppercase(say_hi)
-print(result)
+print(uppercase(say_hi)())
+
+# Decorator and @
+
+def uppercase(function):
+    def wrapper():
+        result = function()
+        uppercase_result = result.upper()
+        return uppercase_result
+    
+    return wrapper      
+
+
+@uppercase
+def say_hi():
+    return "hello there"
+
+
+print(say_hi)
