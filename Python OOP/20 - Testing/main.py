@@ -6,6 +6,7 @@ class SimpleTest(unittest.TestCase):
         expected_result = 'FOO'
         self.assertEqual(result, expected_result)
         
-        
+
+# Running the test        
 if __name__ == '__main__':
     unittest.main()        
