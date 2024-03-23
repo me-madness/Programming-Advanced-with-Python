@@ -22,9 +22,17 @@ class TestWorker(TestCase):
         self.worker.work()
         self.worker.work()
         
-        
         self.assertEqual(expected_money, self.worker.money)
         self.assertEqual(expected_energy, self.worker.energy)
+        
+     
+    def test_work_when_worker_does_not_have_energy_raise_exception(self):
+        self.worker.energy = 0  # Arrange
+        
+        with self.assertRaises(Exception) as ex:
+            self.worker.work()
+        
+        
         
         
 if __name__ == "__main__":
