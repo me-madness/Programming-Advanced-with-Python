@@ -1,5 +1,5 @@
 from unittest import TestCase, main
-from project.worker import Worker
+from worker import Worker
 
 
 class TestWorker(TestCase):
@@ -11,7 +11,7 @@ class TestWorker(TestCase):
     def test_correct_init(self):
         self.assertEqual("TestGuy", self.worker.name)
         self.assertEqual(25_000, self.worker.salary)
-        self.assertEqual(100, self.worker.name)
+        self.assertEqual(100, self.worker.energy)
         self.assertEqual(0, self.worker.money)
 
 
