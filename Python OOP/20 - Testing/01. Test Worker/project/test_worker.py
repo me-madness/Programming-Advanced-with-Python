@@ -1,8 +1,10 @@
 from unittest import TestCase, main
-
+from project.worker import Worker
 
 class TestWorker(TestCase):
-    pass
+    
+    def setUp(self):
+        self.worker = Worker()
 
 
 
