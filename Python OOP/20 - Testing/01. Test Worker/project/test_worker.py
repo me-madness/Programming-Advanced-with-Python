@@ -30,9 +30,9 @@ class TestWorker(TestCase):
         self.worker.energy = 0  # Arrange
         
         with self.assertRaises(Exception) as ex:
-            self.worker.work()
+            self.worker.work()  # Act
         
-        
+        self.assertEqual('Not enough energy.', str(ex.exception)) # Assert
         
         
 if __name__ == "__main__":
