@@ -46,7 +46,19 @@ class TestIntegerList(TestCase):
         self.assertEqual("Index is out of range", str(ie.exception))
         
         
+    def test_get_with_valid_index_returns_value_on_index(self):
+        result = self.i_list.get(1)
+        self.assertEqual(2, result)
         
+        
+    def test_insert_on_invalid_index_raises_index_error(self):
+        with self.assertRaises(IndexError) as ie:
+            self.i_list.insert(1000, 5)    
+            
+        self.assertEqual("Index is out of range", str(ie.exception))
+        
+        
+                  
         
 if __name__ == "__main__":
     main()            
