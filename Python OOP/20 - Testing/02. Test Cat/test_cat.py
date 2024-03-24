@@ -42,7 +42,13 @@ class TestCat(TestCase):
         self.assertFalse(self.cat.sleepy)
         
         
-        
+    def test_make_hungry_cat_sleep_raises_exception(self):
+        self.cat.fed = False    
+    
+        with self.assertRaises(Exception) as ex:
+            self.cat.sleep()
+            
+        self.assertEqual('Cannot sleep while hungry', str(ex.exception))    
     
     
 if __name__ == "__main__":
