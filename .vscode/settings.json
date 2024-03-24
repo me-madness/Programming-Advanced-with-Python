@@ -1,5 +1,14 @@
 {
     "python.analysis.extraPaths": [
         "./Python Advanced/17 - Modules/03. "
-    ]
+    ],
+    "python.testing.unittestArgs": [
+        "-v",
+        "-s",
+        "./Python OOP",
+        "-p",
+        "test_*.py"
+    ],
+    "python.testing.pytestEnabled": false,
+    "python.testing.unittestEnabled": true
 }
