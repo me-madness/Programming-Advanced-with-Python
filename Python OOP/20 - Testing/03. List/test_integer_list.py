@@ -26,7 +26,14 @@ class TestIntegerList(TestCase):
         self.assertEqual(expected_list, self.i_list.get_data())         
             
         
+    def test_remove_index_with_out_of_range_index_error(self):
+        with self.assertRaises(IndexError) as ie:
+            self.i_list.remove_index(1000)   
+            
+        self.assertEqual("Index is out of range", str(ie.exception))
         
+        
+             
         
 if __name__ == "__main__":
     main()            
