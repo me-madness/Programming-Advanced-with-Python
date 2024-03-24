@@ -34,6 +34,18 @@ class TestWorker(TestCase):
         
         self.assertEqual('Not enough energy.', str(ex.exception)) # Assert
         
+    
+    def test_rest_increases_energy_with_one(self):
+        expected_energy = self.worker.energy + 1
         
+        self.worker.rest()
+        
+        self.assertEqual(expected_energy, self.worker.energy)
+        
+        
+    def     
+        
+        
+            
 if __name__ == "__main__":
     main()
