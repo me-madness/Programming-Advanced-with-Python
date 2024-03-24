@@ -65,8 +65,17 @@ class TestIntegerList(TestCase):
         self.assertEqual("Element is not Integer", str(ve.exception))
         
         
+    def test_insert_integer_on_valid_index(self):
+        expected_list = self.i_list.get_data().copy()
         
+        expected_list.insert(1, 5)
+        self.i_list.insert(1, 5)
         
+        self.assertEqual(expected_list, self.i_list.get_data())    
+        
+    
+    
+    
         
 if __name__ == "__main__":
     main()            
