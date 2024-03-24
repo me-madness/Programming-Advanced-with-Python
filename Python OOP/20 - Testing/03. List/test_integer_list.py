@@ -33,7 +33,20 @@ class TestIntegerList(TestCase):
         self.assertEqual("Index is out of range", str(ie.exception))
         
         
-             
+    def test_remove_index_with_valid_index(self):
+        self.i_list.remove_index(1)  
+        
+        self.assertEqual([1, 3], self.i_list.get_data())
+        
+        
+    def test_get_with_out_of_range_index(self):
+        with self.assertRaises(IndexError) as ie:
+            self.i_list.get(1000)              
+        
+        self.assertEqual("Index is out of range", str(ie.exception))
+        
+        
+        
         
 if __name__ == "__main__":
     main()            
