@@ -24,6 +24,10 @@ class TestCat(TestCase):
         self.assertEqual(expected_size, self.cat.size)
 
 
-
+    def test_feed_cat_when_cat_is_already_fed_raise_exception(self):
+        self.cat.fed = True
+    
+    
+    
 if __name__ == "__main__":
     main()
