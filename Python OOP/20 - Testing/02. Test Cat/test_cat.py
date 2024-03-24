@@ -27,6 +27,22 @@ class TestCat(TestCase):
     def test_feed_cat_when_cat_is_already_fed_raise_exception(self):
         self.cat.fed = True
     
+        with self.assertRaises(Exception) as ex:
+            self.cat.eat()
+
+        self.assertEqual('Already fed.', str(ex.exception))
+        
+        
+    def test_sleepy_cat_sleeps_and_its_not_sleepy_after_that(self):
+        self.cat.sleepy = True        
+        self.cat.fed = True
+        
+        self.cat.sleep()        
+    
+        self.assertFalse(self.cat.sleepy)
+        
+        
+        
     
     
 if __name__ == "__main__":
