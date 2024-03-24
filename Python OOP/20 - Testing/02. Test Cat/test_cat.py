@@ -15,7 +15,13 @@ class TestCat(TestCase):
 
 
     def test_feed_cat_makes_cat_sleepy_and_not_hungry_expect_size_increase_by_1(self):
+        expected_size = 1
         
+        self.cat.eat()
+        
+        self.assertTrue(self.cat.fed)
+        self.assertTrue(self.cat.sleepy)
+        self.assertEqual(expected_size, self.cat.size)
 
 
 
