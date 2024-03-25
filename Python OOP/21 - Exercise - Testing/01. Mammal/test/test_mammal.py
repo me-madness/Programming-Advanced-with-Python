@@ -3,8 +3,11 @@ from project.mammal import Mammal
 
 
 class TestMammal(TestCase):
-    pass
+    
+    def setUp(self):
+        self.mammal = Mammal("some name", "some type", "some sound")
 
+    
 
 
 
