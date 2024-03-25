@@ -41,7 +41,9 @@ class TestVehicle(TestCase):
 
 
     def test_correct__str__method(self):
-        
+        expected_result = f"The vehicle has 100 " \
+            f"horse power with 100 fuel left and 1.25 fuel consumption"
 
+    
 if __name__ == "__main__":
     main()        
