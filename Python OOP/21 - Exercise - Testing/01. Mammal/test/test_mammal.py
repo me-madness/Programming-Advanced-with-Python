@@ -12,11 +12,20 @@ class TestMammal(TestCase):
         self.assertEqual("some name", self.mammal.name)
         self.assertEqual("some type", self.mammal.type)
         self.assertEqual("some sound", self.mammal.sound)
-        self.assertEqual("animals", self.mammal._Mammal__kingdom__)
+        self.assertEqual("animals", self.mammal._Mammal__kingdom)
 
 
+    def test_get_sound_returns_correct_string(self):
+        self.assertEqual(f"some name makes sound some", self.mammal.make_sound())
+        
 
-
+    def test_get_kingdom_returns_correct_string(self):
+        self.assertEqual("animals", self.mammal.get_kingdom())
+        
+    
+    def test_get_returns_correct_string(self):
+        self.assertEqual(f"some name is of type some type", self.mammal.info())
+        
 
 if __name__ == "__main__":
     main()
