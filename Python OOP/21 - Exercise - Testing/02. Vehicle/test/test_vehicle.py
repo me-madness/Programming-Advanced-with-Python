@@ -39,6 +39,11 @@ class TestVehicle(TestCase):
         
         self.assertEqual("Too much fuel", str(ex.exception))
 
+    
+    def test_refuel_correct_amount(self):
+        self.vehicle.fuel = 0
+        
+    
 
     def test_correct__str__method(self):
         expected_result = f"The vehicle has 100 " \
