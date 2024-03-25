@@ -43,7 +43,10 @@ class TestVehicle(TestCase):
     def test_refuel_correct_amount(self):
         self.vehicle.fuel = 0
         
-    
+        self.vehicle.refuel(50)
+        
+        self.assertEqual(50, self.vehicle.fuel)
+        
 
     def test_correct__str__method(self):
         expected_result = f"The vehicle has 100 " \
