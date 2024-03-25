@@ -20,10 +20,28 @@ class TestVehicle(TestCase):
     
     
     def test_drive_without_fuel_raises_exception(self):
+        self.vehicle.fuel = 0    
+        
+        with self.assertRaises(Exception) as ex:
+            self.vehicle.drive(100)
+        
+        self.assertEqual("Not enough fuel", str(ex.exception))
+    
+    
+    def test_drive_with_enough_fuel_decreases_fuel(self):
+        self.vehicle.drive(10)
+        self.assertEqual(87.5, self.vehicle.fuel)
         
         
+    def test_refuel_above_capacity_raises_exception(self):
+        with self.assertRaises(Exception) as ex:
+            self.vehicle.refuel(1000)    
         
+        self.assertEqual("Too much fuel", str(ex.exception))
+
+
+    def test_correct__str__method(self):
         
-        
+
 if __name__ == "__main__":
     main()        
