@@ -44,6 +44,8 @@ class TestVehicle(TestCase):
         expected_result = f"The vehicle has 100 " \
             f"horse power with 100 fuel left and 1.25 fuel consumption"
 
-    
+        self.assertEqual(expected_result, str(self.vehicle))
+        
+        
 if __name__ == "__main__":
     main()        
