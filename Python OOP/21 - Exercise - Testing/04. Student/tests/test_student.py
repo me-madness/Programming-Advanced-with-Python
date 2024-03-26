@@ -9,4 +9,5 @@ class TestStudent(TestCase):
         
         
         
-        
+if __name__ == "__main__":
+    main()        
