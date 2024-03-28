@@ -1,5 +1,6 @@
 from abc import ABC, abstractmethod
-from typing import Lsist
+from typing import List
+
 
 class BasePeak(ABC):
     
