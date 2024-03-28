@@ -2,6 +2,7 @@ from abc import ABC, abstractmethod
 from peaks.base_peak import BasePeak
 
 class BaseClimber(ABC):
+    STRENGTH_INCREASE: int = 15
     
     def __init__(self, name: str, strength: float):
         self.name = name
@@ -42,5 +43,16 @@ class BaseClimber(ABC):
     
     
     @abstractmethod
-    def climb(self, peak: BasePeak) -> None
+    def climb(self, peak: BasePeak) -> None:
         pass
+    
+    
+    def rest(self) -> None:
+        self.strength += BaseClimber.STRENGTH_INCREASE
+        
+        
+    def __str__(self):
+        return (f"{self.__class__.__name__}: "  
+               f"/// Climber name: {self.name} * "  
+               f"Left strength: {float(self.strength)} * "  
+               f"Conquered peaks: {', '.join(cp for cp in sorted(self.conquered_peaks))} ///")  
