@@ -3,7 +3,7 @@ from abc import ABC, abstractmethod
 
 class BaseClimber(ABC):
     
-    def __init__(self, name: str, strength: int):
+    def __init__(self, name: str, strength: float):
         self.name = name
         self.strength = strength
         ...
@@ -29,4 +29,7 @@ class BaseClimber(ABC):
     
     @strength.setter
     def strength(self, value):
-        if 
+        if value <= 0:
+            raise ValueError("A climber cannot have negative strength or strength equal to 0!")
+        
+        self.__strength = value
