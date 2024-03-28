@@ -1,5 +1,5 @@
 from abc import ABC, abstractmethod
-
+from typing import Lsist
 
 class BasePeak(ABC):
     
@@ -10,22 +10,31 @@ class BasePeak(ABC):
         
     @property
     def name(self):
-        return 
+        return self.__name
     
     
     @name.setter
     def name(self, value):
-        pass
-    
+        if len(value) < 2:
+            raise ValueError("Peak name cannot be less than 2 symbols!")
+        
+        self.__elevation = value
+        
     
     @property
     def elevation(self):
-        return
+        return self.__elevation
     
     
     @elevation.setter
     def elevation(self, value):
-        pass
+        if value < 1500:
+            raise ValueError("Peak elevation cannot be below 1500m.")
+    
+    
+    @abstractmethod
+    def get_recommended_gear(self) -> List[str]:
+        pass    
     
     
     @abstractmethod
