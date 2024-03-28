@@ -12,7 +12,4 @@ class ArcticPeak(BasePeak):
         if self.elevation > 3000:
             return "Extreme"
         elif 2000 <= self.elevation <= 3000:
-            return "Advanced"
-        
-        
-        
+            return "Advanced"     
