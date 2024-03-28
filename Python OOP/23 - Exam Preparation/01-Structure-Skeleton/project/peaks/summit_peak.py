@@ -5,11 +5,11 @@ from typing import List
 class SummitPeak(BasePeak):
     
     def get_recommended_gear(self) ->List[str]:
-        return ["Ice axe", "Crampons", "Insulated clothing", "Helmet"]
+        return ["Climbing helmet", "Harness", "Climbing shoes", "Ropes"]
     
     
     def calculate_difficulty_level(self) -> str:
-        if self.elevation > 3000:
+        if self.elevation > 2500:
             return "Extreme"
-        elif 2000 <= self.elevation <= 3000:
+        elif 1500 <= self.elevation <= 2500:
             return "Advanced"     
