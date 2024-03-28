@@ -16,3 +16,16 @@ class BasePeak(ABC):
     @name.setter
     def name(self, value):
         pass
+    
+    
+    @property
+    def elevation(self):
+        return
+    
+    
+    @elevation.setter
+    def elevation(self, value):
+        pass
+    
+    
+    
