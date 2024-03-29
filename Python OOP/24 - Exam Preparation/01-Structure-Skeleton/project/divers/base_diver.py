@@ -10,9 +10,14 @@ class BaseDiver:
         self.name = name
         self.oxygen_level = oxygen_level
         self.catch: List[BaseFish] = []
-        self.competition_points = 0.0
+        self.__competition_points = 0.0
         self.has_health_issue: False
         
+    
+    @property
+    def competition_points(self):
+        return round(self.competition_points, 1)
+    
         
     @property
     def name(self):
@@ -50,7 +55,12 @@ class BaseDiver:
     
     @abstractmethod    
     def hit(self, fish: BaseFish):
-        pass        
+        if self.oxygen_level < fish.time_to_catch:
+            self.oxygen_level = 0
+        else:
+            self.catch.append(fish)
+            self.competition_points += fish.points
+            self.oxygen_level -= fish.time_to_catch           
     
     
     def update_health_status(self):
