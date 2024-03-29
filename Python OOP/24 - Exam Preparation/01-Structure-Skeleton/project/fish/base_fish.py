@@ -42,3 +42,8 @@ class BaseFish:
     @time_to_catch.setter
     def time_to_catch(self, value):
         pass   
+    
+    
+    @abstractmethod
+    def fish_details(self):
+        pass
