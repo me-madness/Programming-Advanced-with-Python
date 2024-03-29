@@ -3,9 +3,9 @@ from abc import ABC, abstractmethod
 
 class BaseFish:
     
-    def __init__(self, name: str, point: float, time_to_catch: int) -> None:
+    def __init__(self, name: str, points: float, time_to_catch: int) -> None:
         self.name = name
-        self.point = point
+        self.points = points
         self.time_to_catch = time_to_catch
         
         
@@ -23,15 +23,15 @@ class BaseFish:
     
     
     @property
-    def point(self):
-        return self.__point
+    def points(self):
+        return self.__points
     
     
-    @point.setter
-    def point(self, value):
+    @points.setter
+    def points(self, value):
         if value < 1 or value < 10:
-             raise ValueError("Points should be a value ranging from 1 to 10!")
-        self.__point = value
+             raise ValueError("Pointss should be a value ranging from 1 to 10!")
+        self.__points = value
         
     
     @property
