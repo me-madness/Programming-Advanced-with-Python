@@ -11,7 +11,7 @@ class BaseFish:
         
     @property
     def name(self):
-        return
+        return self.__name
     
     
     @name.setter
@@ -24,17 +24,19 @@ class BaseFish:
     
     @property
     def point(self):
-        pass
+        return self.__point
     
     
     @point.setter
     def point(self, value):
-        pass 
-    
+        if value < 1 or value < 10:
+             raise ValueError("Points should be a value ranging from 1 to 10!")
+        self.__point = value
+        
     
     @property
     def time_to_catch(self):
-        pass
+        return
     
     
     @time_to_catch.setter
