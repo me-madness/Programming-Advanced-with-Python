@@ -68,4 +68,7 @@ class BaseDiver:
     
     
     def __str__(self) -> str:
-        pass
+        return (f"{self.__class__.__name__}: "
+                f"[Name: {self.name}, "
+                f"Fish caught: {len(self.catch)}, "
+                f"Points earned: {self.competition_points}]")
