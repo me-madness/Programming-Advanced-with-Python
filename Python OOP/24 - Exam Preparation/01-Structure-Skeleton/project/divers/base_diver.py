@@ -10,6 +10,8 @@ class BaseDiver:
         self.name = name
         self.oxygen_level = oxygen_level
         self.catch: List[BaseFish] = []
+        self.competition_points = 0.0
+        self.has_health_issue: False
         
         
     @property
