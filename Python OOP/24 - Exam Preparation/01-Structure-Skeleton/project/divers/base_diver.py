@@ -15,7 +15,7 @@ class BaseDiver:
         
     
     @property
-    def competition_points(self):
+    def competition_points(self) -> float:
         return round(self.competition_points, 1)
     
         
@@ -59,12 +59,12 @@ class BaseDiver:
             self.oxygen_level = 0
         else:
             self.catch.append(fish)
-            self.competition_points += fish.points
+            self.__competition_points += fish.points
             self.oxygen_level -= fish.time_to_catch           
     
     
     def update_health_status(self):
-        pass
+        self.has_health_issue = not self.has_health_issue
     
     
     def __str__(self) -> str:
