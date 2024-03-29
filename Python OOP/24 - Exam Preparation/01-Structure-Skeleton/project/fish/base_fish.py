@@ -16,7 +16,10 @@ class BaseFish:
     
     @name.setter
     def name(self, value):
-        pass  
+        if value.strip() == "":
+            raise ValueError("Fish name should be determined!")
+        
+        self.__name = value  
     
     
     @property
