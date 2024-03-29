@@ -13,4 +13,3 @@ class PredatoryFish(BaseFish):
         return (f"{self.__class__.__name__}: {self.name} "
                f" [Points: {self.points}, "
                f"Time to Catch: {self.time_to_catch} seconds]")    
-        
