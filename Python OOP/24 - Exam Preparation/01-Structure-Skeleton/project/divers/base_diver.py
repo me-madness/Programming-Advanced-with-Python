@@ -37,6 +37,25 @@ class BaseDiver:
             raise ValueError("Cannot create diver with negative oxygen level!")           
         self.__oxygen_level = value
         
-        
-            
     
+    @abstractmethod    
+    def miss(self, time_to_catch: int):
+        pass
+    
+    
+    @abstractmethod    
+    def renew_oxy(self):
+        pass
+    
+    
+    @abstractmethod    
+    def hit(self, fish: BaseFish):
+        pass        
+    
+    
+    def update_health_status(self):
+        pass
+    
+    
+    def __str__(self) -> str:
+        pass
