@@ -1,4 +1,7 @@
 from abc import ABC, abstractmethod
+from typing import List
+
+from fish.base_fish import BaseFish
 
 
 class BaseDiver:
@@ -6,7 +9,7 @@ class BaseDiver:
     def __init__(self, name: str, oxygen_level: float) -> None:
         self.name = name
         self.oxygen_level = oxygen_level
-        self.catch: list = []
+        self.catch: List[BaseFish] = []
         
         
     @property
@@ -28,7 +31,8 @@ class BaseDiver:
     
     @oxygen_level.setter
     def oxygen_level(self, value) :
-        pass           
+        if value < 0:
+            raise ValueError("Cannot create diver with negative oxygen level!")           
         self.__oxygen_level = value
         
         
