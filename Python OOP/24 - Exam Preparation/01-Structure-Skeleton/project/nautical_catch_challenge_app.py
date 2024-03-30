@@ -90,4 +90,5 @@ class NauticalCatchChallengeApp:
         pass
     
     
-    def
+    def competition_statistics(self):
+        pass
