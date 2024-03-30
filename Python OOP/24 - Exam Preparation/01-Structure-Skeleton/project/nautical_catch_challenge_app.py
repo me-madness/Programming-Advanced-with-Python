@@ -44,7 +44,22 @@ class NauticalCatchChallengeApp:
               
     
     def chase_fish(self, diver_name: str, fish_name: str, is_lucky: bool):
-        pass
+        try:
+            diver = [d for d in self.divers if d.name == diver_name][0]
+        except IndexError:
+            return f"{diver_name} is not registered for the competition."
+        
+        try:
+            fish = [f for f in self.fish if f.name == fish_name][0]
+        except IndexError:    
+            return f"{fish_name} is not allowed to be caught in this competition."  
+        
+        if diver.has_health_issue:
+            return f"{diver_name} will not be allowed to dive, due to health issues."  
+        
+        if diver.oxygen_level < fish.time_to_catch:
+            diver.miss(fish.time_to_catch)
+            return f"{diver_name} missed a good {fish_name}"
     
     
     def health_recovery(self):
