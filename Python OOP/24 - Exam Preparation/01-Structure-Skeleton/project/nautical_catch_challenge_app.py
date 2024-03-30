@@ -20,8 +20,11 @@ class NauticalCatchChallengeApp:
     
         try:
             diver = [d for d in self.divers if d.name == diver_name][0]
-            return f"{diver_name} is already a participant."
+            return f"{diver.name} is already a participant."
         except IndexError:
+            new_diver = self.divers_mapper[diver_type](diver_name)
+            self.divers.append(new_diver)
+            return f"{diver_name} is successfully registered for the competition as a {diver_type}."
                 
     
     def swim_into_competition(self, fish_type: str, fish_name: str, points: float):
