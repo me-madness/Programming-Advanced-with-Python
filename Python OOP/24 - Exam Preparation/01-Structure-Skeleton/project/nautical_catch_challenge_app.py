@@ -78,3 +78,7 @@ class NauticalCatchChallengeApp:
                 
     def health_recovery(self):
         pass
+    
+    
+    def diver_catch_report(self, diver_name: str):
+        pass
