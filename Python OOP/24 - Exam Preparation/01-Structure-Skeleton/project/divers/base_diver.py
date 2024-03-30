@@ -16,7 +16,7 @@ class BaseDiver:
     
     @property
     def competition_points(self) -> float:
-        return round(self.competition_points, 1)
+        return round(self.__competition_points, 1)
     
         
     @property

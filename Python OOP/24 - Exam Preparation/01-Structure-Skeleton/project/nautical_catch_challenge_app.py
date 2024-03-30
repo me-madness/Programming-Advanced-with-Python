@@ -97,4 +97,11 @@ class NauticalCatchChallengeApp:
     
     
     def competition_statistics(self):
-        pass
+        sorted_divers = sorted(
+            self.divers, key=lambda d: (-d.competition_points, -len(d.catch), d.name)
+        )
+        healthy_divers = [d for d in sorted_divers if not d.has_health_issue]
+        
+        result = f"**Nautical Catch Challenge Statistics**"
+        result += '\n'.join(str(d) for d in healthy_divers)
+        return result
