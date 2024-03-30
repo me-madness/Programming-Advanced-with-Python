@@ -102,6 +102,6 @@ class NauticalCatchChallengeApp:
         )
         healthy_divers = [d for d in sorted_divers if not d.has_health_issue]
         
-        result = f"**Nautical Catch Challenge Statistics**"
+        result = f"**Nautical Catch Challenge Statistics**\n"
         result += '\n'.join(str(d) for d in healthy_divers)
         return result
