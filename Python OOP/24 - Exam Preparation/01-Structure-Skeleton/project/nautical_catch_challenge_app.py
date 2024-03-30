@@ -38,9 +38,14 @@ class NauticalCatchChallengeApp:
             fish = [f for f in self.fish if f.name == fish_name][0] 
             return f"{fish.name} is already permitted."
         except IndexError:
-            
+            new_fish = self.fish_mapper[fish_type](fish_name, points)
+            self.fish.append(new_fish)
+            return f"{fish_name} is allowed for chasing as a {fish_type}"
               
     
-    
     def chase_fish(self, diver_name: str, fish_name: str, is_lucky: bool):
+        pass
+    
+    
+    def health_recovery(self):
         pass
