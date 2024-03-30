@@ -59,8 +59,22 @@ class NauticalCatchChallengeApp:
         
         if diver.oxygen_level < fish.time_to_catch:
             diver.miss(fish.time_to_catch)
-            return f"{diver_name} missed a good {fish_name}"
-    
-    
+            message =  f"{diver_name} missed a good {fish_name}"
+        elif diver.oxygen_level == fish.time_to_catch:
+            if is_lucky:
+                diver.hit(fish)
+                message = f"{diver_name} hits a {fish.points}pt. {fish.name}."
+            else:
+                diver.miss(fish.time_to_catch)
+                message = f"{diver_name} missed a good {fish_name}"
+        else:
+            diver.hit(fish)
+            message = f"{diver_name} hits a {fish.points}pt. {fish.name}."
+        
+        if diver.oxygen_level == 0:
+            diver.update_health_status()
+        return message    
+       
+                
     def health_recovery(self):
         pass
