@@ -31,7 +31,15 @@ class NauticalCatchChallengeApp:
                 
     
     def swim_into_competition(self, fish_type: str, fish_name: str, points: float):
-        pass  
+        if fish_type not in self.fish_mapper:
+            return f"{fish_type} is forbidden for chasing in our competition."
+        
+        try:
+            fish = [f for f in self.fish if f.name == fish_name][0] 
+            return f"{fish.name} is already permitted."
+        except IndexError:
+            
+              
     
     
     def chase_fish(self, diver_name: str, fish_name: str, is_lucky: bool):
