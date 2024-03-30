@@ -1,5 +1,6 @@
 from fish.base_fish import BaseFish
 from divers.base_diver import BaseDiver
+from divers.free_diver import FreeDivers
 
 from typing import List
 
