@@ -87,7 +87,13 @@ class NauticalCatchChallengeApp:
     
     
     def diver_catch_report(self, diver_name: str):
-        pass
+        diver = [d for d in self.divers if d.name == diver_name][0]
+        
+        result = f"**{diver_name} Catch Report**\n"
+        
+        fish_details = "\n".join([fish.fish_details() for fish in diver.catch])
+        result += fish_details
+        return result
     
     
     def competition_statistics(self):
