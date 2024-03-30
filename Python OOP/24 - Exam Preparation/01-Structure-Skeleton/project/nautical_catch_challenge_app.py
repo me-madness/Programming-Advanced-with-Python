@@ -2,12 +2,15 @@ from fish.base_fish import BaseFish
 from divers.base_diver import BaseDiver
 from divers.free_diver import FreeDiver
 from divers.scuba_diver import ScubaDiver
+from fish.deep_sea_fish import DeepSeaFish
+from fish.predatory_fish import PredatoryFish
 
 from typing import List
 
 
 class NauticalCatchChallengeApp:
     divers_mapper = {"FreeDiver": FreeDiver, "ScubaDiver": ScubaDiver}
+    fish_mapper = {"DeepSeaFish": DeepSeaFish, "PredatoryFish": PredatoryFish}
     
     def __init__(self) -> None:
         self.divers: List[BaseDiver] = []
