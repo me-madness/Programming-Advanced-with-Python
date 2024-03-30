@@ -77,8 +77,17 @@ class NauticalCatchChallengeApp:
        
                 
     def health_recovery(self):
-        pass
+        divers_with_health_issues = [d for d in self.divers if d.has_health_issue]
+        
+        for diver in divers_with_health_issues:
+            diver.has_health_issue = False
+            diver.renew_oxy()
+            
+        return f"Divers recovered: {len(divers_with_health_issues)}"    
     
     
     def diver_catch_report(self, diver_name: str):
         pass
+    
+    
+    def
