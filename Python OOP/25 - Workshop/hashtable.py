@@ -22,6 +22,7 @@ class HashTable:
         except ValueError:
             raise KeyError("Key does not exist")
     
+    
     def __setitem__(self, key, value):
         try:
             existing_value_index = self.__keys.index(key)
@@ -41,6 +42,7 @@ class HashTable:
         if self.__keys[index] is None:
             return index    
         return self.__find_index(index + 1)
+     
         
     def hash(self, key: str) -> int:
         return sum([ord(el) for el in key]) % self.__length 
