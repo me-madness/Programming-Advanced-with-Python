@@ -31,7 +31,9 @@ class HashTable:
     
     
     def __resize(self):
-        pass   
+        self.__keys = self.__keys + [None] * self.__length
+        self.__values = self.__values + [None] * self.__length
+        self.__length *= 2   
     
 table = HashTable()
 
