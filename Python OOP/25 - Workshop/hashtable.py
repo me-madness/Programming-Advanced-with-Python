@@ -60,7 +60,14 @@ class HashTable:
         self.__setitem__(key, value)
         
         
-               
+    def __str__(self) -> str:
+        result = [
+            f"{self.__keys[index]}: {self.__values[index]}" 
+            for index in range(self.__length) 
+            if self.__keys[index is not None]
+        ]
+        return "{ " + ", ".join(result) + "}"  
+            
     
 table = HashTable()
 
