@@ -4,6 +4,10 @@ class HashTable:
         self.array = [None, None, None, None]
     
     
+    def __setitem__(self, key, value):
+        pass
+        
+        
     
 table = HashTable()
 
