@@ -9,7 +9,7 @@ class HashTable:
     def __setitem__(self, key, value):
         index = self.hash(key)
         if self.__keys[index] is not None:
-            pass
+            index = self.__find_index()
         self.__keys[index] = key
         self.__values[index] = value
         
@@ -17,7 +17,7 @@ class HashTable:
     def __find_index(self, index):
         if self.__keys[index] is None:
             return index    
-        
+        self.__find_index9index + 1
         
     def hash(self, key: str) -> int:
         return sum([ord(el) for el in key]) % self.__length    
