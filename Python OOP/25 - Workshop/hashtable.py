@@ -24,7 +24,7 @@ class HashTable:
     
     def __setitem__(self, key, value):
         try:
-            existing_value_index = self.__keys(key)
+            existing_value_index = self.__keys.index(key)
             self.__values[existing_value_index] = value
         except ValueError:
             if self.count == self.__length:
