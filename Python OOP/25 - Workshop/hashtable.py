@@ -1,7 +1,9 @@
 class HashTable:
     
     def __init__(self) -> None:
-        self.array = [None, None, None, None]
+        self.__keys = [None, None, None, None]
+        self.__values = [None, None, None, None]
+        self.__length = 4
     
     
     def __setitem__(self, key, value):
