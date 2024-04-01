@@ -8,8 +8,15 @@ class HashTable:
     
     def __setitem__(self, key, value):
         index = self.hash(key)
+        if self.__keys[index] is not None:
+            pass
         self.__keys[index] = key
         self.__values[index] = value
+        
+        
+    def __find_index(self, index):
+        if self.__keys[index] is None:
+            return index    
         
         
     def hash(self, key: str) -> int:
