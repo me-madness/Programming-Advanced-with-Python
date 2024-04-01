@@ -13,6 +13,8 @@ class HashTable:
         
         
     def __find_index(self, index):
+        if index == self.__length:
+            index = 0
         if self.__keys[index] is None:
             return index    
         return self.__find_index(index + 1)
