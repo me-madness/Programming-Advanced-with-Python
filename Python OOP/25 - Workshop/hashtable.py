@@ -7,9 +7,13 @@ class HashTable:
     
     
     def __setitem__(self, key, value):
-        pass
+        index = self.hash(key)
+        self.__keys[index] = key
+        self.__values[index] = value
         
         
+    def hash(self, key: str) -> int:
+        return sum([ord(el) for el in key]) % self.__length    
     
 table = HashTable()
 
