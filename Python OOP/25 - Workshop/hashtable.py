@@ -23,12 +23,16 @@ class HashTable:
             raise KeyError("Key does not exist")
     
     def __setitem__(self, key, value):
-        if self.count == self.__length:
-            # Resize the lists, so that we have space for the new value
-            self.__resize()
-        index = self.__find_index(self.hash(key))
-        self.__keys[index] = key
-        self.__values[index] = value
+        try:
+            existing_value_index = self.__keys(key)
+            self.__values[existing_value_index] = value
+        except ValueError:
+            if self.count == self.__length:
+                # Resize the lists, so that we have space for the new value
+                self.__resize()
+            index = self.__find_index(self.hash(key))
+            self.__keys[index] = key
+            self.__values[index] = value
         
         
     def __find_index(self, index):
@@ -66,7 +70,7 @@ class HashTable:
             for index in range(self.__length) 
             if self.__keys[index is not None]
         ]
-        return "{ " + ", ".join(result) + "}"  
+        return "{ " + ", ".join(result) + " }"  
             
     
 table = HashTable()
