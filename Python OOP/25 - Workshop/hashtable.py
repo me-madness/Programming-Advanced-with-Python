@@ -6,8 +6,13 @@ class HashTable:
         self.__length = 4
     
     
-    def __len__(self):
+    @property
+    def count(self):
         return len([el for el in self.__keys if el is not None])
+        
+     
+    def __len__(self):
+        return self.__length
     
     
     def __getitem__(self, item):
@@ -15,10 +20,10 @@ class HashTable:
             index = self.__keys.index(item)
             return self.__values[index] 
         except ValueError:
-            raise KeyError()
+            raise KeyError("Key does not exist")
     
     def __setitem__(self, key, value):
-        if self.__len__() == self.__length:
+        if self.count == self.__length:
             # Resize the lists, so that we have space for the new value
             self.__resize()
         index = self.__find_index(self.hash(key))
