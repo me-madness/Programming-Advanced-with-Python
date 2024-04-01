@@ -53,7 +53,14 @@ class HashTable:
             index = self.__keys.index(key)
             return self.__values[index] 
         except ValueError:
-            return return_default_value     
+            return return_default_value  
+        
+        
+    def add(self, key, value):
+        self.__setitem__(key, value)
+        
+        
+               
     
 table = HashTable()
 
