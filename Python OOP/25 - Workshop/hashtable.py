@@ -10,6 +10,13 @@ class HashTable:
         return len([el for el in self.__keys if el is not None])
     
     
+    def __getitem__(self, item):
+        try:
+            index = self.__keys.index(item)
+            return self.__values[index] 
+        except ValueError:
+            raise KeyError()
+    
     def __setitem__(self, key, value):
         if self.__len__() == self.__length:
             # Resize the lists, so that we have space for the new value
@@ -36,12 +43,12 @@ class HashTable:
         self.__length *= 2 
         
         
-    def get(self, key):
+    def get(self, key, return_default_value = None):
         try:
             index = self.__keys.index(key)
             return self.__values[index] 
         except ValueError:
-            return None     
+            return return_default_value     
     
 table = HashTable()
 
