@@ -6,7 +6,14 @@ class HashTable:
         self.__length = 4
     
     
+    def __len__(self):
+        return len([el for el in self.__key if el is not None])
+    
+    
     def __setitem__(self, key, value):
+        if self.__len__() == self.__length:
+            # Resize the lists, so that the new value
+            self.__resize()
         index = self.__find_index(self.hash(key))
         self.__keys[index] = key
         self.__values[index] = value
@@ -20,7 +27,11 @@ class HashTable:
         return self.__find_index(index + 1)
         
     def hash(self, key: str) -> int:
-        return sum([ord(el) for el in key]) % self.__length    
+        return sum([ord(el) for el in key]) % self.__length 
+    
+    
+    def __resize(self):
+        pass   
     
 table = HashTable()
 
