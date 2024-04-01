@@ -68,8 +68,11 @@ class HashTable:
         sorted_result = sorted(result, key=lambda t: t[0])
         table = HashTable()
         table._HashTable__keys = [t[0] for t in sorted_result]
-        table._HashTable__values = [t[0] for t in sorted_result]
+        table._HashTable__values = [t[1] for t in sorted_result]
         table._HashTable__length = self.__length
+        diff = self.__length - self.count
+        table._HashTable__keys = table._HashTable__keys + [None] * diff
+        table._HashTable__values = table._HashTable__values + [None] * diff
         return table
         
         
@@ -95,3 +98,4 @@ print(table)
 print(table.get("name"))
 print(table["age"])
 print(len(table))    
+print(table.sort())    
