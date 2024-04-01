@@ -7,12 +7,12 @@ class HashTable:
     
     
     def __len__(self):
-        return len([el for el in self.__key if el is not None])
+        return len([el for el in self.__keys if el is not None])
     
     
     def __setitem__(self, key, value):
         if self.__len__() == self.__length:
-            # Resize the lists, so that the new value
+            # Resize the lists, so that we have space for the new value
             self.__resize()
         index = self.__find_index(self.hash(key))
         self.__keys[index] = key
@@ -33,7 +33,15 @@ class HashTable:
     def __resize(self):
         self.__keys = self.__keys + [None] * self.__length
         self.__values = self.__values + [None] * self.__length
-        self.__length *= 2   
+        self.__length *= 2 
+        
+        
+    def get(self, key):
+        try:
+            index = self.__keys.index(key)
+            return self.__values[index] 
+        except ValueError:
+            return None     
     
 table = HashTable()
 
