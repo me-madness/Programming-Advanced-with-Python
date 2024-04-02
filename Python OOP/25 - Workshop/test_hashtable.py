@@ -54,7 +54,31 @@ class TestHashTable(TestCase):
         self.assertEqual(self.h._HashTable__values, [None, None, None, None])
         self.assertEqual(self.h._HashTable__length, 4)
         
-        self.h["name"] = "Test"        
+        self.h["name"] = "test"   
+        
+        self.assertEqual(self.h._HashTable__keys, [None, "name", None, None])
+        self.assertEqual(self.h._HashTable__values, [None, "test", None, None])
+        self.assertEqual(self.h._HashTable__length, 4)
+        
+        
+    def test_same_key_is_replaced_with_latest_value(self):
+        self.assertEqual(self.h._HashTable__keys, [None, None, None, None])
+        self.assertEqual(self.h._HashTable__values, [None, None, None, None])
+        self.assertEqual(self.h._HashTable__length, 4)
+        
+        self.h["name"] = "test"   
+        
+        self.assertEqual(self.h._HashTable__keys, [None, "name", None, None])
+        self.assertEqual(self.h._HashTable__values, [None, "test", None, None])
+        self.assertEqual(self.h._HashTable__length, 4)
+        
+        self.h["name"] = "test2"   
+        
+        self.assertEqual(self.h._HashTable__keys, [None, "name", None, None])
+        self.assertEqual(self.h._HashTable__values, [None, "test2", None, None])
+        self.assertEqual(self.h._HashTable__length, 4)
+        
+                 
     
 if __name__ == "__main__":
     main()    
