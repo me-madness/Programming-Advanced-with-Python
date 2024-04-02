@@ -41,6 +41,12 @@ class TestHashTable(TestCase):
         self.h["name"] = "Peter"
     
         self.assertEqual(self.h["name"], "Peter")
+        
+        
+    def test_get_item_key_not_presented_raises(self):
+        with self.assertRaises(KeyError) as err:
+            self.h["no-such-key"]
+        self.assertEqual(str(err), "Key does not exist")        
     
 if __name__ == "__main__":
     main()    
