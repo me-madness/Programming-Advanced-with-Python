@@ -84,9 +84,20 @@ class TestHashTable(TestCase):
         self.assertEqual(self.h._HashTable__values, [None, None, None, None])
         self.assertEqual(self.h._HashTable__length, 4)
         
+        self.h["name"] = "test"   
+        self.h["age"] = 25
+        self.h["number"] = 8
+        self.h["street"] = "Krastio Rakovski"
         
+        self.assertEqual(self.h._HashTable__keys, ["number", "name", "age", "street"])
+        self.assertEqual(self.h._HashTable__values, [8, "test", 25, "Krastio Rakovski"])
+        self.assertEqual(self.h._HashTable__length, 4) 
         
-                     
+        self.h["new_value"] = "hi"
+        
+        self.assertEqual(self.h._HashTable__keys, ["number", "name", "age", "street", None, None, None, None])
+        self.assertEqual(self.h._HashTable__values, [8, "test", 25, "Krastio Rakovski", None, None, None, None])
+        self.assertEqual(self.h._HashTable__length, 8)            
     
 if __name__ == "__main__":
     main()    
