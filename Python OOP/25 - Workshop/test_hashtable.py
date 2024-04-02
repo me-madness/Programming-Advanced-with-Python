@@ -8,9 +8,9 @@ class TestHashTable(TestCase):
     
     
     def test_init(self):
-        self.assertEqual(self.h_HashTable__keys, [None, None, None, None])
-        self.assertEqual(self.h_HashTable__values, [None, None, None, None])
-        self.assertEqual(self.h_HashTable__length, 4)
+        self.assertEqual(self.h._HashTable__keys, [None, None, None, None])
+        self.assertEqual(self.h._HashTable__values, [None, None, None, None])
+        self.assertEqual(self.h._HashTable__length, 4)
     
     
     def test_count(self):
@@ -33,6 +33,14 @@ class TestHashTable(TestCase):
         self.h["name"] = "Test"
         self.h["city"] = "Plovdiv"
     
+        self.assertEqual(len(self.h), 8)    
+        self.assertEqual(len(self.h), self.h._HashTable__length)
+    
+    
+    def test_get_item(self):
+        self.h["name"] = "Peter"
+    
+        self.assertEqual(self.h["name"], "Peter")
     
 if __name__ == "__main__":
     main()    
