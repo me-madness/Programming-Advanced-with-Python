@@ -8,15 +8,31 @@ class TestHashTable(TestCase):
     
     
     def test_init(self):
-        self.assertEqual(self.h_Hashtable__keys, [None, None, None, None])
-        self.assertEqual(self.h_Hashtable__values, [None, None, None, None])
-        self.assertEqual(self.h_Hashtable__length, 4)
+        self.assertEqual(self.h_HashTable__keys, [None, None, None, None])
+        self.assertEqual(self.h_HashTable__values, [None, None, None, None])
+        self.assertEqual(self.h_HashTable__length, 4)
     
     
     def test_count(self):
         result = self.h.count
         self.assertEqual(result, 0)
         
+        # TODO test when there is element which is not None
+        
+        
+    def test_length(self):
+        self.assertEqual(len(self.h), 4)    
+        self.assertEqual(len(self.h), self.h._HashTable__length)    
+    
+        # Test with resizing
+        self.h["name"] = "Peter"
+        self.h["age"] = 25
+        self.h["id"] = 1
+        self.h["city"] = "Sofiq"
+        self.h["street"] = "Markovo Tepe"
+        self.h["name"] = "Test"
+        self.h["city"] = "Plovdiv"
+    
     
 if __name__ == "__main__":
     main()    
