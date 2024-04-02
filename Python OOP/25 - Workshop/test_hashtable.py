@@ -78,7 +78,15 @@ class TestHashTable(TestCase):
         self.assertEqual(self.h._HashTable__values, [None, "test2", None, None])
         self.assertEqual(self.h._HashTable__length, 4)
         
-                 
+    
+    def test_more_values_then_current_length_resize_attributes(self):
+        self.assertEqual(self.h._HashTable__keys, [None, None, None, None])
+        self.assertEqual(self.h._HashTable__values, [None, None, None, None])
+        self.assertEqual(self.h._HashTable__length, 4)
+        
+        
+        
+                     
     
 if __name__ == "__main__":
     main()    
