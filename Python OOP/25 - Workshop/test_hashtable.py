@@ -13,5 +13,10 @@ class TestHashTable(TestCase):
         self.assertEqual(self.h_Hashtable__length, 4)
     
     
+    def test_count(self):
+        result = self.h.count
+        self.assertEqual(result, 0)
+        
+    
 if __name__ == "__main__":
     main()    
