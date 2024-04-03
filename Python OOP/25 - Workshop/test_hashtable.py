@@ -100,5 +100,14 @@ class TestHashTable(TestCase):
         self.assertEqual(self.h._HashTable__length, 8)            
     
     
+    def test_hash(self):
+        result = self.h.hash("name")
+        
+        self.assertEqual(result, 1)
+        
+        
+        
+        
+    
 if __name__ == "__main__":
     main()    
