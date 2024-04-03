@@ -106,7 +106,10 @@ class TestHashTable(TestCase):
         self.assertEqual(result, 1)
         
         
-        
+    def test_get_existing_value(self):
+        self.h["name"] = "test"
+        result = self.h.get("name")
+        self.assertEqual(result, "test")    
         
     
 if __name__ == "__main__":
