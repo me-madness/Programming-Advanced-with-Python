@@ -115,6 +115,17 @@ class TestHashTable(TestCase):
     def test_get_non_existing_value_with_no_default_argument(self):
         self.assertNotIn("name", self.h._HashTable__keys)
     
+        result = self.h.get("name")
+        
+        self.assertIsNone(result)
+        
+        
+    def test_get_non_existing_value_with_default_argument(self):
+        self.assertNotIn("name", self.h._HashTable__keys)
+    
+        result = self.h.get("name", "default")
+        
+        self.assertEqual(result, "default")    
     
     
 if __name__ == "__main__":
