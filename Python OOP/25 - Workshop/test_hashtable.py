@@ -128,5 +128,15 @@ class TestHashTable(TestCase):
         self.assertEqual(result, "default")    
     
     
+    def test_sort(self):
+        self.h["name"] = "test"
+        self.h["age"] = 25
+    
+        self.assertEqual(self.h._HashTable__keys, [None, "name", None, None])
+        self.assertEqual(self.h._HashTable__values, [None, "test", None, None])
+        self.assertEqual(self.h._HashTable__length, 4)
+        
+        
+    
 if __name__ == "__main__":
     main()    
