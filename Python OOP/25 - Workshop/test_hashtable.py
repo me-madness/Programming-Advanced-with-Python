@@ -157,7 +157,18 @@ class TestHashTable(TestCase):
     
         self.h.add("new_key", 6)     
         
-                    
+        self.h["name"] = "test"
+        self.h["age"] = 25
+    
+        self.assertEqual(self.h._HashTable__keys, [None, "name", "age", "new_key"])
+        self.assertEqual(self.h._HashTable__values, [None, "test", 25, 6])
+        self.assertEqual(self.h._HashTable__length, 4)            
+    
+
+    def test_string(self):
+        self.h["name"] = "test"
+        self.h["age"] = 25
+    
     
 if __name__ == "__main__":
     main()    
