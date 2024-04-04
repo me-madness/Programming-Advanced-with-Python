@@ -155,7 +155,9 @@ class TestHashTable(TestCase):
         self.assertEqual(self.h._HashTable__values, [None, "test", 25, None])
         self.assertEqual(self.h._HashTable__length, 4)
     
-                         
+        self.h.add("new_key", 6)     
+        
+                    
     
 if __name__ == "__main__":
     main()    
