@@ -169,6 +169,10 @@ class TestHashTable(TestCase):
         self.h["name"] = "test"
         self.h["age"] = 25
     
+        result = str(self.h)
+        
+        self.assertEqual("{ name: test, age: 25 }", result)   
+    
     
 if __name__ == "__main__":
     main()    
