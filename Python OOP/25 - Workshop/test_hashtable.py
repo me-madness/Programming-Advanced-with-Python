@@ -146,6 +146,15 @@ class TestHashTable(TestCase):
         self.assertEqual(self._HashTable__values, [25, "test", None, None])
         self.assertEqual(self._HashTable__length, 4)      
               
+    
+    def test_add(self):
+        self.h["name"] = "test"
+        self.h["age"] = 25
+    
+        self.assertEqual(self.h._HashTable__keys, [None, "name", "age", None])
+        self.assertEqual(self.h._HashTable__values, [None, "test", 25, None])
+        self.assertEqual(self.h._HashTable__length, 4)
+    
                          
     
 if __name__ == "__main__":
