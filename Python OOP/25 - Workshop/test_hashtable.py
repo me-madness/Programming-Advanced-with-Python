@@ -132,11 +132,16 @@ class TestHashTable(TestCase):
         self.h["name"] = "test"
         self.h["age"] = 25
     
-        self.assertEqual(self.h._HashTable__keys, [None, "name", None, None])
-        self.assertEqual(self.h._HashTable__values, [None, "test", None, None])
+        self.assertEqual(self.h._HashTable__keys, [None, "name", "age", None])
+        self.assertEqual(self.h._HashTable__values, [None, "test", 25, None])
         self.assertEqual(self.h._HashTable__length, 4)
         
+        result = self.h.sort()
         
+        self.assertEqual(self.h._HashTable__keys, [None, "name", "age", None])
+        self.assertEqual(self.h._HashTable__values, [None, "test", 25, None])
+        self.assertEqual(self.h._HashTable__length, 4)
+                         
     
 if __name__ == "__main__":
     main()    
