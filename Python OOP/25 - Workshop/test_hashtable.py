@@ -176,3 +176,10 @@ class TestHashTable(TestCase):
     
 if __name__ == "__main__":
     main()    
+    
+    
+    def test_new_string(self):
+        pass
+    
+    
+    
