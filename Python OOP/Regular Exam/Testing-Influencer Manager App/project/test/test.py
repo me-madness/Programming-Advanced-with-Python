@@ -8,6 +8,8 @@ class TestInfluencerManagerApp:
         pass
     
     
+    def test_base_budget_campaign(self, value):
+        pass
     
     
     
