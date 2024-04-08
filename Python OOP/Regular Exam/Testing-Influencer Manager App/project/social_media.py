@@ -1,3 +1,6 @@
+from unittest import TestCase, main
+
+
 class SocialMedia:
     def __init__(self, username: str, platform: str, followers: int, content_type: str):
         self._username = username
@@ -54,3 +57,7 @@ class SocialMedia:
             return f"Comment added by {self._username} on the post."
 
         return "Comment should be more than 10 characters."
+
+
+if __name__ == "__main__":
+    main()
