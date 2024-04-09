@@ -12,6 +12,8 @@ class TestInfluencerManagerApp:
         pass
     
     
+    def test_premium_influencer(self):
+        pass
     
 
 if __name__ == "__main__":
