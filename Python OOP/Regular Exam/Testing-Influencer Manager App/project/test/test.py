@@ -12,6 +12,10 @@ class TestInfluencerManagerApp:
         pass
     
     
+    def test_high_budget_campaign(self):
+        pass
+    
+    
     def test_premium_influencer(self):
         pass
     
