@@ -27,6 +27,12 @@ class TestInfluencerManagerApp:
     def test_standard_influencer(self):
         pass
     
+    
+    def test_common(self):
+        pass
+    
+    
+    
 
 if __name__ == "__main__":
     main()
