@@ -32,6 +32,8 @@ class TestInfluencerManagerApp:
         pass
     
     
+    def test_some_error_value_added(self):
+        pass
     
 
 if __name__ == "__main__":
