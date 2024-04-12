@@ -34,6 +34,10 @@ class TestInfluencerManagerApp:
     
     def test_some_error_value_added(self):
         pass
+   
+   
+    def test_new_commit(self):
+        pass
     
 
 if __name__ == "__main__":
