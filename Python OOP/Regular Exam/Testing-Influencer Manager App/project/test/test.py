@@ -52,5 +52,11 @@ class TestInfluencerManagerApp:
     def test_false(self):
         pass
     
+    
+    # Let's add a new test
+    def test_after_a_new_commit(self):
+        pass
+    
+    
 if __name__ == "__main__":
     main()
