@@ -62,6 +62,11 @@ class TestInfluencerManagerApp:
         pass
     
     
+    # New test is added
+    def test_test_test(self):
+        pass
+    
+    
     
 if __name__ == "__main__":
     main()
