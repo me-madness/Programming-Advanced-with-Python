@@ -67,6 +67,10 @@ class TestInfluencerManagerApp:
         pass
     
     
+    # One ore test is added in my test.py file
+    def test_test_python_file(self):
+        pass
+    
     
 if __name__ == "__main__":
     main()
