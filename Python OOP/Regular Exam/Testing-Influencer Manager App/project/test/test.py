@@ -58,7 +58,7 @@ class TestInfluencerManagerApp:
         pass
     
     
-    def test_esch(self):
+    def test_ich(self):
         pass
     
     
