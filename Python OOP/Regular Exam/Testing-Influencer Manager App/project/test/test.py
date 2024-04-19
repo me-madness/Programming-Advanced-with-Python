@@ -72,5 +72,10 @@ class TestInfluencerManagerApp:
         pass
     
     
+    # new day new test
+    def test_new_day(self):
+        pass
+    
+    
 if __name__ == "__main__":
     main()
