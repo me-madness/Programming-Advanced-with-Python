@@ -77,5 +77,10 @@ class TestInfluencerManagerApp:
         pass
     
     
+    # After a new day
+    def test_after_a_new_day(self):
+        pass
+    
+    
 if __name__ == "__main__":
     main()
