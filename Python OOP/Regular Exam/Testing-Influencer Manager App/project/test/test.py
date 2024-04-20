@@ -82,5 +82,10 @@ class TestInfluencerManagerApp:
         pass
     
     
+    # a new day in my journey
+    def test_my_journey(self):
+        pass
+    
+    
 if __name__ == "__main__":
     main()
