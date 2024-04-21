@@ -82,8 +82,13 @@ class TestInfluencerManagerApp:
         pass
     
     
-    # a new day in my journey
+    # A new day in my journey
     def test_my_journey(self):
+        pass
+    
+    
+    # New commit after all day long
+    def test_all_day_long(self):
         pass
     
     
