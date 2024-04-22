@@ -92,5 +92,10 @@ class TestInfluencerManagerApp:
         pass
     
     
+    # Monday commit
+    def test_monday_commit(self):
+        pass
+    
+    
 if __name__ == "__main__":
     main()
