@@ -17,3 +17,7 @@ print(a + b)
 print(a - b)        
 print(a * b)        
     
+# Third commit for hackerrank
+if __name__ == '__main__':
+   n = int(input().strip())
+   
