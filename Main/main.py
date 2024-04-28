@@ -20,4 +20,12 @@ print(a * b)
 # Third commit for hackerrank
 if __name__ == '__main__':
    n = int(input().strip())
+  
+# New commit in sunday
+if __name__ == '__main__':
+    n = int(input().strip())
+
+print()
+print()
+print()
    
