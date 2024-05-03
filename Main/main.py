@@ -38,3 +38,8 @@ print()
 if __name__ == '__main__':
   n = int(input().strip())
 print()
+
+# Third of May
+if __name__ == '__main__':
+  n = int(input().strip())
+print()
