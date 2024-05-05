@@ -1,4 +1,4 @@
-# The second task from my hackerrank task
+koi# The second task from my hackerrank task
 if __name__ == '__main__':
     n = int(input().strip())
 if n % 2 == 0:
@@ -40,6 +40,11 @@ if __name__ == '__main__':
 print()
 
 # Third of May
+if __name__ == '__main__':
+  n = int(input().strip())
+print()
+
+# Fift of May
 if __name__ == '__main__':
   n = int(input().strip())
 print()
