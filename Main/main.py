@@ -48,3 +48,8 @@ print()
 if __name__ == '__main__':
   n = int(input().strip())
 print()
+
+# nine of May
+if __name__ == '__main__':
+  n = int(input().strip())
+print()
