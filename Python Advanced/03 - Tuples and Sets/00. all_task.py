@@ -1,5 +1,6 @@
 # 01. Count Same Values
 
+new_tuple = []
 
 
 # 02. Students Grades
