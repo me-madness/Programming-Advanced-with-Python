@@ -35,25 +35,25 @@
 
 # 04. Water Dispenser
 
-from collections import deque
+# from collections import deque
 
-water_dispenser = deque()
-water_quantity = int(input())
-name = input()
-command = input()
+# water_dispenser = deque()
+# water_quantity = int(input())
+# name = input()
+# command = input()
 
-while command != "End":
-    if "refill" in command:
-        pass
-    else:
-        liters = int(command)
-        if liters <= water_quantity:
-            water_quantity -= liters
-            print(f"{water_dispenser.popleft()} got water")
-        else:
-            print(f"{water_dispenser.popleft()} must wait")
-    command = input()   
-print(f"{water_quantity} liters left")    
+# while command != "End":
+#     if "refill" in command:
+#         pass
+#     else:
+#         liters = int(command)
+#         if liters <= water_quantity:
+#             water_quantity -= liters
+#             print(f"{water_dispenser.popleft()} got water")
+#         else:
+#             print(f"{water_dispenser.popleft()} must wait")
+#     command = input()   
+# print(f"{water_quantity} liters left")    
 
 # 05. Hot Potato
 
