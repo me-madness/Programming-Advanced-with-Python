@@ -1,11 +1,9 @@
 # 01. Reverse String
-
 # reverse_string = input()
 # new_string_reversed = reversed(reverse_string)
 # print(''.join(new_string_reversed))
 
 # 02. Matching Parentheses
-
 # text = input()
 # parentheses = []
 
@@ -17,7 +15,6 @@
 #         print(text[start_index:i + 1])
         
 # 03. Supermarket
-
 # from collections import deque
 
 # supermarket = deque()
@@ -34,7 +31,6 @@
 #         supermarket.append(command)        
 
 # 04. Water Dispenser
-
 # from collections import deque
 
 # water_dispenser = deque()
@@ -56,6 +52,3 @@
 # print(f"{water_quantity} liters left")    
 
 # 05. Hot Potato
-
-
-
